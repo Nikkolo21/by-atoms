@@ -7,13 +7,16 @@ module.exports = {
       lg: '976px',
       xl: '1440px',
     },
+    fontSize: {
+      normal: '0.8rem'
+    },
     colors: {
       primary: '#1C6DD0',
       secondary: '#A3E4DB',
       tertiary: '#FED1EF',
       bone: '#FFF8F3',
       error: '#F05454',
-      white: '#ffffff'
+      white: '#ffffff',
     },
     extend: {
       borderRadius: {

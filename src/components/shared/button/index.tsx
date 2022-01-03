@@ -15,6 +15,8 @@ export const Button: React.FC<ButtonProps> = ({
                 return 'bg-primary text-white';
             case BUTTON_TYPE.SECONDARY:
                 return 'bg-secondary text-white';
+            case BUTTON_TYPE.WHITE:
+                return 'bg-white text-primary border-primary';
             case BUTTON_TYPE.TERTIARY:
                 return 'bg-tertiary text-black';
             case BUTTON_TYPE.ERROR:
@@ -33,7 +35,7 @@ export const Button: React.FC<ButtonProps> = ({
             case BUTTON_SIZE.LG:
                 return 'px-7 py-3 text-lg';
             case BUTTON_SIZE.MD:
-                return 'px-6 py-2 text-base';
+                return 'px-6 py-2 text-normal';
             case BUTTON_SIZE.SM:
                 return 'px-3 py-2 text-sm';
             case BUTTON_SIZE.XS:
@@ -44,7 +46,7 @@ export const Button: React.FC<ButtonProps> = ({
     }
 
     return (
-        <button className={`uppercase border-0 rounded-button-lg shadow-sm ${setButtonType(type)} ${setButtonSize(size)}`} style={{backgroundColor}} onClick={onClick}>
+        <button className={`uppercase border rounded-button-lg shadow-sm ${setButtonType(type)} ${setButtonSize(size)}`} style={{backgroundColor}} onClick={onClick}>
             {text}
         </button>
     )

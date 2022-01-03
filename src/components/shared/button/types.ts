@@ -14,9 +14,10 @@ export enum BUTTON_TYPE {
     ERROR = 'error',
     BONE = 'bone',
     TERTIARY = 'tertiary',
+    WHITE = 'white',
 }
 
-export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'error' | 'bone';
+export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'error' | 'bone' | 'white';
 
 export interface ButtonProps {
     size?: ButtonSize;

@@ -10,7 +10,7 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <Button type={BUTTON_TYPE.PRIMARY} text='Emanuel es marico' onClick={() => console.log(1)} />
-        <Button type={BUTTON_TYPE.SECONDARY} text='Neptaly tambien es marico' onClick={() => console.log(1)} />
+        <Button type={BUTTON_TYPE.WHITE} text='Neptaly tambien es marico' onClick={() => console.log(1)} />
       </div>
     </Provider>
   );
