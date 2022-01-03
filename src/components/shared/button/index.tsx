@@ -8,6 +8,9 @@ export const Button: React.FC<ButtonProps> = ({
     disabled,
     type = BUTTON_TYPE.PRIMARY,
     backgroundColor,
+    width,
+    height,
+    fontSize = SIZES.NORMAL,
     onClick,
 }) => {
     const setButtonType = (type: ButtonType) => {
@@ -29,25 +32,30 @@ export const Button: React.FC<ButtonProps> = ({
         }
     }
 
-    const setButtonSize = (size: Sizes) => {
+    const setButtonSize = (size: Sizes, fontSize: Sizes) => {
         switch(size) {
             case SIZES.XL:
-                return 'px-8 py-3 text-xl';
+                return `px-12 py-4 text-${fontSize}`;
             case SIZES.LG:
-                return 'px-7 py-3 text-lg';
+                return `px-10 py-4 text-${fontSize}`;
             case SIZES.MD:
-                return 'px-6 py-2 text-normal';
+                return `px-8 py-3 text-${fontSize}`;
             case SIZES.SM:
-                return 'px-3 py-2 text-sm';
+                return `px-4 py-2 text-${fontSize}`;
             case SIZES.XS:
-                return 'px-3 py-1 text-xs';
+                return `px-3 py-1 text-${fontSize}`;
             default:
-                return 'px-6 py-2 text-normal';
+                return `px-6 py-2 text-${fontSize}`;
         }
     }
 
     return (
-        <button className={`uppercase border rounded-button-lg shadow-sm ${setButtonType(type)} ${setButtonSize(size)}`} style={{backgroundColor}} onClick={onClick}>
+        <button
+            className={`uppercase border rounded-button-lg shadow-sm ${setButtonType(type)} ${setButtonSize(size, fontSize)}`}
+            disabled={disabled}
+            style={{backgroundColor, width, height}}
+            onClick={onClick}
+        >
             {text}
         </button>
     )

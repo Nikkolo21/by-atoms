@@ -17,5 +17,8 @@ export interface ButtonProps {
     disabled?: boolean;
     type?: ButtonType;
     backgroundColor?: string;
+    width?: string;
+    height?: string;
+    fontSize?: Sizes;
     onClick: () => void;
 }
