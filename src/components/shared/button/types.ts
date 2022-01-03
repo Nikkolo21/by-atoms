@@ -1,12 +1,4 @@
-export type ButtonSize = 'xl' | 'lg' | 'md' | 'sm' | 'xs';
-
-export enum BUTTON_SIZE {
-    XL = 'xl',
-    LG = 'lg',
-    MD = 'md',
-    SM = 'sm',
-    XS = 'xs',
-}
+import { Sizes } from "../types";
 
 export enum BUTTON_TYPE {
     PRIMARY = 'primary',
@@ -20,7 +12,7 @@ export enum BUTTON_TYPE {
 export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'error' | 'bone' | 'white';
 
 export interface ButtonProps {
-    size?: ButtonSize;
+    size?: Sizes;
     text: string;
     disabled?: boolean;
     type?: ButtonType;

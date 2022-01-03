@@ -17,6 +17,7 @@ module.exports = {
       bone: '#FFF8F3',
       error: '#F05454',
       white: '#ffffff',
+      grey: '#a4adb5',
     },
     extend: {
       borderRadius: {

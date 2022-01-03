@@ -1,8 +1,9 @@
 import React from 'react';
-import { ButtonProps, ButtonSize, ButtonType, BUTTON_SIZE, BUTTON_TYPE } from './types';
+import { Sizes, SIZES } from '../types';
+import { ButtonProps, ButtonType, BUTTON_TYPE } from './types';
 
 export const Button: React.FC<ButtonProps> = ({
-    size = BUTTON_SIZE.MD,
+    size = SIZES.MD,
     text,
     disabled,
     type = BUTTON_TYPE.PRIMARY,
@@ -28,20 +29,20 @@ export const Button: React.FC<ButtonProps> = ({
         }
     }
 
-    const setButtonSize = (size: ButtonSize) => {
+    const setButtonSize = (size: Sizes) => {
         switch(size) {
-            case BUTTON_SIZE.XL:
+            case SIZES.XL:
                 return 'px-8 py-3 text-xl';
-            case BUTTON_SIZE.LG:
+            case SIZES.LG:
                 return 'px-7 py-3 text-lg';
-            case BUTTON_SIZE.MD:
+            case SIZES.MD:
                 return 'px-6 py-2 text-normal';
-            case BUTTON_SIZE.SM:
+            case SIZES.SM:
                 return 'px-3 py-2 text-sm';
-            case BUTTON_SIZE.XS:
+            case SIZES.XS:
                 return 'px-3 py-1 text-xs';
             default:
-                return 'px-4 py-2 text-base';
+                return 'px-6 py-2 text-normal';
         }
     }
 
