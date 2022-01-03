@@ -10,6 +10,9 @@ module.exports = {
     fontSize: {
       normal: '0.8rem'
     },
+    minHeight: {
+      'header': '7rem',
+    },
     colors: {
       primary: '#1C6DD0',
       secondary: '#A3E4DB',
