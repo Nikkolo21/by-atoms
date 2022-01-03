@@ -15,7 +15,12 @@ module.exports = {
       error: '#F05454',
       white: '#ffffff'
     },
-    extend: {},
+    extend: {
+      borderRadius: {
+        'button-lg': '18px',
+        'button-md': '15px',
+      }
+    },
   },
   plugins: [],
 }
