@@ -30,7 +30,17 @@ export const Input: React.FC<InputProps> = ({
     }
     return (
         <input
-            className={`placeholder-shown:uppercase placeholder:text-center bg-white border border-grey rounded-button-lg active:border-primary focus-visible:border-primary ${setInputSize(size, fontSize)}`}
+            className={[
+                'placeholder-shown:uppercase',
+                'placeholder:text-center',
+                'bg-white',
+                'border',
+                'border-grey',
+                'rounded-button-md',
+                'active:border-primary',
+                'focus-visible:border-primary',
+                setInputSize(size, fontSize)
+            ].join(' ')}
             style={{width, padding, height}}
             placeholder={placeholder}
             onChange={onChange}

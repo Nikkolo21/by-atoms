@@ -51,7 +51,14 @@ export const Button: React.FC<ButtonProps> = ({
 
     return (
         <button
-            className={`uppercase border rounded-button-lg shadow-sm ${setButtonType(type)} ${setButtonSize(size, fontSize)}`}
+            className={[
+                'uppercase',
+                'border',
+                'rounded-button-lg',
+                'shadow-sm',
+                setButtonType(type),
+                setButtonSize(size, fontSize)
+            ].join(' ')}
             disabled={disabled}
             style={{backgroundColor, width, height}}
             onClick={onClick}
