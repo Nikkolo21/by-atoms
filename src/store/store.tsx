@@ -6,12 +6,13 @@ import { createBrowserHistory } from 'history';
 import { rootReducer } from './reducers';
 //import sagas from './sagas';
 import { persistStore } from './persistor';
+import thunk from 'redux-thunk'
 
 // Middlewares
 const sagaMiddleware = createSagaMiddleware();
 const history = createBrowserHistory();
 
-const middlewares = [sagaMiddleware, routerMiddleware(history)];
+const middlewares = [sagaMiddleware, routerMiddleware(history), thunk];
 declare global {
   interface Window {
     __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
