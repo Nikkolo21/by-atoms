@@ -21,6 +21,7 @@ module.exports = {
       error: '#F05454',
       white: '#ffffff',
       grey: '#a4adb5',
+      greyTransparent: 'rgba(0,0,0,0.4)',
     },
     extend: {
       borderRadius: {
