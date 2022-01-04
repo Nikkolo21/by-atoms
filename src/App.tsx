@@ -9,6 +9,7 @@ import { Wrapper } from './components/shared/wrapper';
 import { Link } from './components/shared/link';
 import { Modal } from './components/shared/modal';
 import './App.css';
+import './styles/output.css';
 
 function App() {
   const [openModal, setOpenModal] = useState(false);

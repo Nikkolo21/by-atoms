@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./src/**/*.{html,js,tsx,ts}"],
+  purge: ["./public/**/*.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
       sm: '480px',

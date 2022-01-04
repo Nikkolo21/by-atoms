@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@tailwindcss/jit": "^0.1.18",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -17,6 +18,7 @@
     "history": "^5.2.0",
     "lodash.clonedeep": "^4.5.0",
     "lodash.merge": "^4.6.2",
+    "postcss-cli": "^9.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
@@ -37,7 +39,8 @@
     "test": "jest",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "watch:css": "postcss -w src/styles/tailwind.css -o src/styles/output.css"
   },
   "eslintConfig": {
     "extends": [
@@ -80,8 +83,9 @@
     "@types/lodash.clonedeep": "^4.5.6",
     "@types/lodash.merge": "^4.6.6",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
+    "autoprefixer": "^10.4.1",
     "jest": "^27.4.5",
-    "tailwindcss": "^3.0.8",
+    "postcss": "^8.4.5",
     "webpack": "^5.65.0"
   }
 }
