@@ -20,11 +20,10 @@ function App() {
           <Link onClick={() => console.log('icon clicked')} type='primary'>Icon</Link>
         </Wrapper>
         <Wrapper display='flex' justifyContent='center'>
-          Options
+          <Button type={TYPES.PRIMARY} size='xl' text='Options' onClick={() => console.log(1)} />
         </Wrapper>
       </Header>
       <div className="App">
-        <Button type={TYPES.PRIMARY} text='Emanuel es marico' onClick={() => console.log(1)} />
         <Button type={TYPES.WHITE} text='Neptaly tambien es marico' onClick={() => console.log(2)} />
         <Input onChange={() => console.log(3)} />
         <Modal open={openModal} closeModal={() => setOpenModal(false)} content={<div style={{height: '400px'}}>modal content</div>}>

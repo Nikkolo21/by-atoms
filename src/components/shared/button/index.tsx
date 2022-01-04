@@ -22,11 +22,11 @@ export const Button: React.FC<ButtonProps> = ({
             case TYPES.WHITE:
                 return ['bg-white', 'text-primary', 'border-primary'];
             case TYPES.TERTIARY:
-                return ['bg-tertiary', 'text-black'];
+                return ['bg-tertiary', 'text-white', 'border-tertiary'];
             case TYPES.ERROR:
                 return ['bg-error', 'text-white'];
             case TYPES.BONE:
-                return ['bg-bone', 'text-black'];
+                return ['bg-bone', 'text-black', 'border-bone'];
             default:
                 return ['bg-primary', 'text-white'];
         }
