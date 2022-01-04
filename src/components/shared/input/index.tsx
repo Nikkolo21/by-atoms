@@ -32,7 +32,6 @@ export const Input: React.FC<InputProps> = ({
         <input
             className={[
                 'placeholder-shown:uppercase',
-                'placeholder:text-center',
                 'bg-white',
                 'border',
                 'border-grey',

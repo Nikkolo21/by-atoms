@@ -7,7 +7,7 @@ export const Header: React.FC<HeaderProps> = ({
     children,
 }) => {
     return (
-        <div className='header flex px-16 justify-between items-center w-full min-h-header h-fit bg-bone sticky top-0' style={{height}}>
+        <div className='header flex px-4 justify-between items-center w-full min-h-header h-fit bg-bone sticky top-0' style={{height}}>
             {children}
         </div>
     )

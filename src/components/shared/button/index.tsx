@@ -1,31 +1,31 @@
 import React from 'react';
-import { Sizes, SIZES } from '../types';
-import { ButtonProps, ButtonType, BUTTON_TYPE } from './types';
+import { Sizes, SIZES, Types, TYPES } from '../types';
+import { ButtonProps } from './types';
 
 export const Button: React.FC<ButtonProps> = ({
     size = SIZES.MD,
     text,
     disabled,
-    type = BUTTON_TYPE.PRIMARY,
+    type = TYPES.PRIMARY,
     backgroundColor,
     width,
     height,
     fontSize = SIZES.NORMAL,
     onClick,
 }) => {
-    const setButtonType = (type: ButtonType) => {
+    const setButtonType = (type: Types) => {
         switch(type) {
-            case BUTTON_TYPE.PRIMARY:
+            case TYPES.PRIMARY:
                 return ['bg-primary', 'text-white'];
-            case BUTTON_TYPE.SECONDARY:
+            case TYPES.SECONDARY:
                 return ['bg-secondary', 'text-white'];
-            case BUTTON_TYPE.WHITE:
+            case TYPES.WHITE:
                 return ['bg-white', 'text-primary', 'border-primary'];
-            case BUTTON_TYPE.TERTIARY:
+            case TYPES.TERTIARY:
                 return ['bg-tertiary', 'text-black'];
-            case BUTTON_TYPE.ERROR:
+            case TYPES.ERROR:
                 return ['bg-error', 'text-white'];
-            case BUTTON_TYPE.BONE:
+            case TYPES.BONE:
                 return ['bg-bone', 'text-black'];
             default:
                 return ['bg-primary', 'text-white'];

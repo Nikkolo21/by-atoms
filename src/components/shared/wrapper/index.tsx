@@ -1,14 +1,15 @@
 import React from 'react';
-import { WrapperProps, DISPLAY, FLEX_DIRECTION, JUSTIFY_ITEM, PLACE_ITEM } from './types';
+import { WrapperProps, DISPLAY, FLEX_DIRECTION, POSITION_ITEM } from './types';
 
 export const Wrapper: React.FC<WrapperProps> = ({
     width,
     height,
     backgroundColor,
     display = DISPLAY.FLEX,
-    placeItems = PLACE_ITEM.NORMAL,
     flexDirection = FLEX_DIRECTION.ROW,
-    justifyItems = JUSTIFY_ITEM.END,
+    placeItems = POSITION_ITEM.NORMAL,
+    justifyItems = POSITION_ITEM.START,
+    justifyContent = POSITION_ITEM.START,
     children,
 }) => {
     const setDisplay = () => {
@@ -16,11 +17,11 @@ export const Wrapper: React.FC<WrapperProps> = ({
             case DISPLAY.BLOCK:
                 return ['block'];
             case DISPLAY.FLEX:
-                return ['flex', `flex-${flexDirection}`, `justify-items-${justifyItems}`];
+                return ['flex', `flex-${flexDirection}`, `justify-items-${justifyItems}`, `place-content-${justifyContent}`];
             case DISPLAY.GRID:
                 return ['grid', `place-items-${placeItems}`];
             default:
-                return ['flex', `flex-${flexDirection}`, `justify-items-${justifyItems}`];
+                return ['flex', `flex-${flexDirection}`, `justify-items-${justifyItems}`, `place-content-${justifyContent}`];
         }
     }
 
