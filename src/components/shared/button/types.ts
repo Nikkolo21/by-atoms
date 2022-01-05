@@ -9,5 +9,5 @@ export interface ButtonProps {
     width?: string;
     height?: string;
     fontSize?: Sizes;
-    onClick: () => void;
+    onClick?: () => void;
 }

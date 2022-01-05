@@ -11,6 +11,7 @@ export const Input: React.FC<InputProps> = ({
     height,
     padding,
     fontSize = SIZES.NORMAL,
+    type,
 }) => {
     const setInputSize = (size: Sizes, fontSize: Sizes) => {
         switch(size) {
@@ -43,6 +44,7 @@ export const Input: React.FC<InputProps> = ({
             style={{width, padding, height}}
             placeholder={placeholder}
             onChange={onChange}
+            type={type}
             disabled={disabled}
         />
     )

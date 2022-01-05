@@ -1,5 +1,5 @@
 export type Display = 'flex' | 'grid' | 'block';
-export type FlexPosition = 'row' | 'column';
+export type FlexPosition = 'row' | 'col';
 export type PositionItems = 'center' | 'end' | 'start' | 'normal';
 
 export enum DISPLAY {
@@ -10,7 +10,7 @@ export enum DISPLAY {
 
 export enum FLEX_DIRECTION {
     ROW = 'row',
-    COLUMN = 'column',
+    COLUMN = 'col',
 }
 
 export enum POSITION_ITEM {
@@ -24,6 +24,7 @@ export interface WrapperProps {
     display?: Display;
     width?: string;
     height?: string;
+    padding?: string;
     backgroundColor?: string;
     flexDirection?: FlexPosition;
     justifyItems?: PositionItems;
