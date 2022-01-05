@@ -12,4 +12,5 @@ export interface InputProps {
     padding?: string;
     fontSize?: Sizes;
     type?: InputType;
+    noBorder?: boolean;
 }

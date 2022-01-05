@@ -23,6 +23,7 @@ export enum POSITION_ITEM {
 export interface WrapperProps {
     display?: Display;
     width?: string;
+    maxWidth?: string;
     height?: string;
     padding?: string;
     backgroundColor?: string;

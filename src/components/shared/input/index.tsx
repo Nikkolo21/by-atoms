@@ -12,6 +12,7 @@ export const Input: React.FC<InputProps> = ({
     padding,
     fontSize = SIZES.NORMAL,
     type,
+    noBorder,
 }) => {
     const setInputSize = (size: Sizes, fontSize: Sizes) => {
         switch(size) {
@@ -34,7 +35,7 @@ export const Input: React.FC<InputProps> = ({
             className={[
                 'placeholder-shown:uppercase',
                 'bg-white',
-                'border',
+                noBorder ? 'border-0' :  'border',
                 'border-grey',
                 'rounded-button-md',
                 'active:border-primary',
