@@ -6,8 +6,8 @@ import { Input } from './components/shared/input';
 import { TYPES } from './components/shared/types';
 import { Header } from './components/shared/header';
 import { Wrapper } from './components/shared/wrapper';
-import { Link } from './components/shared/link';
 import { Modal } from './components/shared/modal';
+import { default as logo } from './assets/logo.svg';
 import './App.css';
 import './styles/output.css';
 
@@ -17,10 +17,10 @@ function App() {
     <Provider store={store}>
       <Header>
         <Wrapper display='grid' placeItems='center'>
-          <Link onClick={() => console.log('icon clicked')} type='primary'>Icon</Link>
+          <Wrapper height='80px'><img src={logo}/></Wrapper>
         </Wrapper>
         <Wrapper display='flex' justifyContent='center'>
-          <Button type={TYPES.PRIMARY} size='xl' text='Options' onClick={() => console.log(1)} />
+          <Button width='150px' type={TYPES.PRIMARY} text='Options' onClick={() => console.log(1)} />
         </Wrapper>
       </Header>
       <div className="App">
