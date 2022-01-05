@@ -1,13 +1,16 @@
 /**
  * Write data to local storage
+ *
+ * @format
  * @param {string} key - key for storing
  * @param {Object} data - serializable object
  */
- export const write = (key: any, data: any) => {
-  try {
-    localStorage.setItem(key, JSON.stringify(data));
-    // eslint-disable-next-line no-empty
-  } catch {}
+
+export const write = (key: any, data: any) => {
+	try {
+		localStorage.setItem(key, JSON.stringify(data));
+		// eslint-disable-next-line no-empty
+	} catch {}
 };
 
 /**
@@ -16,14 +19,14 @@
  * @returns {Object}
  */
 export const read = (key: any) => {
-  try {
-    const serializedState = localStorage.getItem(key);
-    if (!serializedState) {
-      return undefined;
-    }
+	try {
+		const serializedState = localStorage.getItem(key);
+		if (!serializedState) {
+			return undefined;
+		}
 
-    return JSON.parse(serializedState);
-  } catch (e) {
-    return undefined;
-  }
+		return JSON.parse(serializedState);
+	} catch (e) {
+		return undefined;
+	}
 };

@@ -1,6 +1,8 @@
-import { Types } from "../types";
+/** @format */
+
+import { Types } from '../types';
 
 export interface LinkProps {
-    type?: Types;
-    onClick: () => void;
+	type?: Types;
+	onClick: () => void;
 }
