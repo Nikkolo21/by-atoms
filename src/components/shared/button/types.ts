@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import { Sizes, Types } from "../types";
 
 export interface ButtonProps {
@@ -9,5 +10,6 @@ export interface ButtonProps {
     width?: string;
     height?: string;
     fontSize?: Sizes;
+    icon?: ReactElement;
     onClick?: () => void;
 }

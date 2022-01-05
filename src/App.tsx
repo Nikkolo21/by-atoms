@@ -7,6 +7,7 @@ import { TYPES } from './components/shared/types';
 import { Header } from './components/shared/header';
 import { Wrapper } from './components/shared/wrapper';
 import { Login } from './components/login';
+import { Design } from './components/design/index';
 import { default as logo } from './assets/logo.svg';
 import './App.css';
 import './styles/output.css';
@@ -30,6 +31,7 @@ function App() {
       </Header>
       <Routes>
         <Route path="/login" element={<Login/>} />
+        <Route path="/design" element={<Design/>} />
       </Routes>
     </Provider>
   );

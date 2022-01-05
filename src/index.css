@@ -16,3 +16,10 @@ body {
   margin: 0;
   font-family: Montserrat;
 }
+
+@layer utilities {
+  .disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

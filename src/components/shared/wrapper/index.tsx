@@ -7,6 +7,7 @@ export const Wrapper: React.FC<WrapperProps> = ({
     height,
     padding,
     backgroundColor,
+    gap,
     display = DISPLAY.FLEX,
     flexDirection = FLEX_DIRECTION.ROW,
     placeItems = POSITION_ITEM.NORMAL,
@@ -33,7 +34,7 @@ export const Wrapper: React.FC<WrapperProps> = ({
             'h-fit',
             ...setDisplay(),
         ].join(' ')}
-        style={{backgroundColor, height, width, maxWidth, padding}}>
+        style={{backgroundColor, height, width, maxWidth, padding, gap}}>
             {children}
         </div>
     )
