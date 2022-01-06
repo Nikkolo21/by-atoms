@@ -7,6 +7,7 @@ import { TYPES } from "../shared/types";
 import { Wrapper } from "../shared/wrapper";
 import { Link } from "../shared/link";
 import { Text } from "../shared/text";
+import { default as isotipo } from "../../assets/isotipoV1.svg";
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ export const Login = () => {
     <Wrapper display="grid" placeItems="center" height="100%">
       <Wrapper
         borderRadius="10px"
-        padding="100px 0"
+        padding="50px 0"
         width="100%"
         maxWidth="600px"
         backgroundColor="#FFF8F3"
@@ -43,6 +44,11 @@ export const Login = () => {
         >
           {({ values, isSubmitting, handleChange, handleBlur }) => (
             <Form style={{ width: "100%" }}>
+                <Wrapper height="200px" display="flex" justifyContent="center" margin="0 0 20px 0">
+                  <Link onClick={() => navigate('/')}>
+                    <img src={isotipo} style={{height: '-webkit-fill-available'}} />
+                  </Link>
+                </Wrapper>
               <Wrapper height="80px" display="grid" placeItems="center">
                 <Input
                   onChange={handleChange}
