@@ -43,5 +43,6 @@ export interface InputProps {
 	checked?: boolean;
 	accept?: string;
 	src?: string;
+	name?: string;
 	noBorder?: boolean;
 }

@@ -21,6 +21,7 @@ export const Input: React.FC<InputProps> = ({
 	max,
 	accept,
 	src,
+	name,
 	noBorder,
 }) => {
 	const setInputSize = (size: Sizes, fontSize: Sizes) => {
@@ -62,6 +63,7 @@ export const Input: React.FC<InputProps> = ({
 			max={max}
 			accept={accept}
 			src={src}
+			name={name}
 			disabled={disabled}
 		/>
 	);
