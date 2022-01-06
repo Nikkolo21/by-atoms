@@ -42,7 +42,7 @@ export const Login = () => {
 					}}
 					onSubmit={(values, { setSubmitting }) => {
 						setTimeout(() => {
-							console.log({ values });
+							console.log(values);
 							setSubmitting(false);
 						}, 400);
 					}}
@@ -96,10 +96,21 @@ export const Login = () => {
 									placeholder="Password"
 								/>
 							</Wrapper>
+							<Wrapper display="grid" placeItems="center" margin='10px 0 0 0'>
+								<Button
+									buttonType="submit"
+									type={TYPES.PRIMARY}
+									text="Login"
+									width="30%"
+									height="50px"
+									letterSpacing="2px"
+									onClick={() => console.log('login')}
+								/>
+							</Wrapper>
 							<Wrapper
 								display="grid"
 								placeItems="center"
-								padding="30px 0"
+								padding="20px 0"
 							>
 								<Text fontSize="sm">
 									Don't have an account?{' '}
@@ -110,17 +121,6 @@ export const Login = () => {
 										Sign up
 									</Link>
 								</Text>
-							</Wrapper>
-							<Wrapper display="grid" placeItems="center">
-								<Button
-									buttonType="submit"
-									type={TYPES.PRIMARY}
-									text="Login"
-									width="30%"
-									height="50px"
-									letterSpacing="2px"
-									onClick={() => console.log('login')}
-								/>
 							</Wrapper>
 						</Form>
 					)}

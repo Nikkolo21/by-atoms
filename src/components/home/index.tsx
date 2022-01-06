@@ -7,7 +7,7 @@ import { Button } from '../shared/button';
 import { Header } from '../shared/header';
 import { TYPES } from '../shared/types';
 import { Wrapper } from '../shared/wrapper';
-import { default as logo } from '../../assets/logotipoV7.svg';
+import { default as logo } from '../../assets/logoV1.svg';
 
 export const Home = () => {
 	const navigate = useNavigate();
@@ -15,7 +15,7 @@ export const Home = () => {
 		<Header>
 			<Wrapper>
 				<Link to="/">
-					<Wrapper height="40px">
+					<Wrapper height="30px">
 						<img src={logo} />
 					</Wrapper>
 				</Link>
