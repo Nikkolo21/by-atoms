@@ -40,7 +40,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "watch:css": "postcss -w src/styles/tailwind.css -o src/styles/output.css"
+    "watch:css": "postcss -w src/styles/tailwind.css -o src/styles/output.css",
+    "pretty": "prettier --write \"src/**/*.{json,js,jsx,ts,tsx}\""
   },
   "eslintConfig": {
     "extends": [
