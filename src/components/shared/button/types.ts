@@ -1,15 +1,19 @@
-import { Sizes, Types } from "../types";
+/** @format */
+
+import { ReactElement } from 'react';
+import { Sizes, Types } from '../types';
 
 export interface ButtonProps {
-  size?: Sizes;
-  buttonType?: "button" | "submit" | "reset" | undefined;
-  text: string;
-  disabled?: boolean;
-  type?: Types;
-  backgroundColor?: string;
-  width?: string;
-  height?: string;
-  letterSpacing?: string;
-  fontSize?: Sizes;
-  onClick?: () => void;
+	size?: Sizes;
+	buttonType?: 'button' | 'submit' | 'reset' | undefined;
+	text: string;
+	disabled?: boolean;
+	type?: Types;
+	backgroundColor?: string;
+	width?: string;
+	height?: string;
+	letterSpacing?: string;
+	fontSize?: Sizes;
+	icon?: ReactElement;
+	onClick?: () => void;
 }
