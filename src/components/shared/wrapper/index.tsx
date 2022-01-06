@@ -6,10 +6,12 @@ import { WrapperProps, DISPLAY, FLEX_DIRECTION, POSITION_ITEM } from './types';
 export const Wrapper: React.FC<WrapperProps> = ({
 	width,
 	maxWidth,
+	borderRadius,
 	height,
 	padding,
-	backgroundColor,
+	margin,
 	gap,
+	backgroundColor,
 	display = DISPLAY.FLEX,
 	flexDirection = FLEX_DIRECTION.ROW,
 	placeItems = POSITION_ITEM.NORMAL,
@@ -43,7 +45,16 @@ export const Wrapper: React.FC<WrapperProps> = ({
 	return (
 		<div
 			className={['w-full', 'h-fit', ...setDisplay()].join(' ')}
-			style={{ backgroundColor, height, width, maxWidth, padding, gap }}
+			style={{
+				backgroundColor,
+				height,
+				width,
+				maxWidth,
+				padding,
+				margin,
+				gap,
+				borderRadius,
+			}}
 		>
 			{children}
 		</div>

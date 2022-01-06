@@ -31,7 +31,8 @@ export interface InputProps {
 	size?: Sizes;
 	placeholder?: string;
 	disabled?: boolean;
-	onChange?: () => void;
+	onChange?: any;
+	onBlur?: any;
 	width?: string;
 	height?: string;
 	padding?: string;

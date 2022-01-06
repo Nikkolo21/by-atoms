@@ -10,10 +10,12 @@ export const Input: React.FC<InputProps> = ({
 	id,
 	disabled,
 	onChange,
+	onBlur,
 	width,
+	name,
 	height,
 	padding,
-	fontSize = SIZES.NORMAL,
+	fontSize = SIZES.SM,
 	type,
 	value,
 	checked,
@@ -21,7 +23,6 @@ export const Input: React.FC<InputProps> = ({
 	max,
 	accept,
 	src,
-	name,
 	noBorder,
 }) => {
 	const setInputSize = (size: Sizes, fontSize: Sizes) => {
@@ -46,7 +47,7 @@ export const Input: React.FC<InputProps> = ({
 				'placeholder-shown:uppercase',
 				'bg-white',
 				noBorder ? 'border-0' : 'border',
-				'border-grey',
+				'border-opacityGrey',
 				'rounded-button-md',
 				'active:border-primary',
 				'focus-visible:border-primary',
@@ -56,15 +57,16 @@ export const Input: React.FC<InputProps> = ({
 			id={id}
 			placeholder={placeholder}
 			onChange={onChange}
+			onBlur={onBlur}
 			type={type}
-			value={value}
 			checked={checked}
 			min={min}
 			max={max}
 			accept={accept}
 			src={src}
-			name={name}
 			disabled={disabled}
+			value={value}
+			name={name}
 		/>
 	);
 };

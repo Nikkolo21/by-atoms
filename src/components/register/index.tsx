@@ -10,7 +10,7 @@ import { Wrapper } from '../shared/wrapper';
 import { Link } from '../shared/link';
 import { Text } from '../shared/text';
 
-export const Login = () => {
+export const Register = () => {
 	const navigate = useNavigate();
 	return (
 		<Wrapper display="grid" placeItems="center" height="100%">
@@ -86,12 +86,12 @@ export const Login = () => {
 								padding="30px 0"
 							>
 								<Text fontSize="sm">
-									Don't have an account?{' '}
+									Already have an account?{' '}
 									<Link
 										type="primary"
-										onClick={() => navigate('/register')}
+										onClick={() => navigate('/login')}
 									>
-										Sign up
+										Login
 									</Link>
 								</Text>
 							</Wrapper>
@@ -99,11 +99,11 @@ export const Login = () => {
 								<Button
 									buttonType="submit"
 									type={TYPES.PRIMARY}
-									text="Login"
+									text="Register"
 									width="30%"
 									height="50px"
 									letterSpacing="2px"
-									onClick={() => console.log('login')}
+									onClick={() => console.log('register')}
 								/>
 							</Wrapper>
 						</Form>

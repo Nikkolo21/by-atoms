@@ -19,6 +19,14 @@ body {
 	font-family: Montserrat;
 }
 
+@layer base {
+	.App {
+		display: grid;
+		place-items: center;
+		height: 100vh;
+	}
+}
+
 @layer utilities {
 	.disabled {
 		opacity: 0.5;
