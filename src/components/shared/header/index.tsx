@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { HeaderProps } from './types';
-import './header.css';
 
 export const Header: React.FC<HeaderProps> = ({ height, children }) => {
 	return (

@@ -7,13 +7,22 @@ import { InputProps } from './types';
 export const Input: React.FC<InputProps> = ({
 	size = SIZES.MD,
 	placeholder = 'Insert element',
+	id,
 	disabled,
 	onChange,
+	onBlur,
 	width,
+	name,
 	height,
 	padding,
-	fontSize = SIZES.NORMAL,
+	fontSize = SIZES.SM,
 	type,
+	value,
+	checked,
+	min,
+	max,
+	accept,
+	src,
 	noBorder,
 }) => {
 	const setInputSize = (size: Sizes, fontSize: Sizes) => {
@@ -38,17 +47,26 @@ export const Input: React.FC<InputProps> = ({
 				'placeholder-shown:uppercase',
 				'bg-white',
 				noBorder ? 'border-0' : 'border',
-				'border-grey',
+				'border-opacityGrey',
 				'rounded-button-md',
 				'active:border-primary',
 				'focus-visible:border-primary',
 				setInputSize(size, fontSize),
 			].join(' ')}
 			style={{ width, padding, height }}
+			id={id}
 			placeholder={placeholder}
 			onChange={onChange}
+			onBlur={onBlur}
 			type={type}
+			checked={checked}
+			min={min}
+			max={max}
+			accept={accept}
+			src={src}
 			disabled={disabled}
+			value={value}
+			name={name}
 		/>
 	);
 };

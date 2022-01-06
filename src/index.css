@@ -1,25 +1,40 @@
+/** @format */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @font-face {
-  font-family: Poppins;
-  src: url("../public/fonts/Poppins-Regular.ttf") format("opentype");
+	font-family: Poppins;
+	src: url('../public/fonts/Poppins-Regular.ttf') format('opentype');
 }
 
 @font-face {
-  font-family: Montserrat;
-  src: url("../public/fonts/Montserrat-Regular.ttf") format("opentype");
+	font-family: Montserrat;
+	src: url('../public/fonts/Montserrat-Regular.ttf') format('opentype');
 }
 
 body {
-  margin: 0;
-  font-family: Montserrat;
+	margin: 0;
+	font-family: Montserrat;
+}
+
+@layer base {
+	.App {
+		display: grid;
+		place-items: center;
+		height: 100vh;
+	}
 }
 
 @layer utilities {
-  .disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
+	.disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+	.header {
+		z-index: 1;
+		box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+		color: rgba(0, 0, 0, 0.8);
+	}
 }

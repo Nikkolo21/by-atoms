@@ -38,8 +38,6 @@
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
     "watch:css": "postcss -w src/styles/tailwind.css -o src/styles/output.css",
     "pretty": "prettier --write \"src/**/*.{json,js,jsx,ts,tsx}\""
   },
@@ -47,16 +45,6 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
     ]
   },
   "browserslist": {
@@ -72,14 +60,6 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.4.9",
-    "@storybook/addon-essentials": "^6.4.9",
-    "@storybook/addon-links": "^6.4.9",
-    "@storybook/builder-webpack5": "^6.4.9",
-    "@storybook/manager-webpack5": "^6.4.9",
-    "@storybook/node-logger": "^6.4.9",
-    "@storybook/preset-create-react-app": "^4.0.0",
-    "@storybook/react": "^6.4.9",
     "@types/history": "^4.7.9",
     "@types/lodash.clonedeep": "^4.5.6",
     "@types/lodash.merge": "^4.6.6",

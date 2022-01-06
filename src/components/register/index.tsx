@@ -10,7 +10,7 @@ import { Wrapper } from '../shared/wrapper';
 import { Link } from '../shared/link';
 import { Text } from '../shared/text';
 
-export const Login = () => {
+export const Register = () => {
 	const navigate = useNavigate();
 	return (
 		<Wrapper display="grid" placeItems="center" height="100%">
@@ -21,7 +21,8 @@ export const Login = () => {
 				maxWidth="600px"
 				backgroundColor="#FFF8F3"
 				display="grid"
-				placeItems="center">
+				placeItems="center"
+			>
 				<Formik
 					initialValues={{ email: '', password: '' }}
 					validate={(values) => {
@@ -43,13 +44,15 @@ export const Login = () => {
 							console.log({ values });
 							setSubmitting(false);
 						}, 400);
-					}}>
+					}}
+				>
 					{({ values, isSubmitting, handleChange, handleBlur }) => (
 						<Form style={{ width: '100%' }}>
 							<Wrapper
 								height="80px"
 								display="grid"
-								placeItems="center">
+								placeItems="center"
+							>
 								<Input
 									onChange={handleChange}
 									onBlur={handleBlur}
@@ -64,7 +67,8 @@ export const Login = () => {
 							<Wrapper
 								height="80px"
 								display="grid"
-								placeItems="center">
+								placeItems="center"
+							>
 								<Input
 									onChange={handleChange}
 									onBlur={handleBlur}
@@ -79,13 +83,15 @@ export const Login = () => {
 							<Wrapper
 								display="grid"
 								placeItems="center"
-								padding="30px 0">
+								padding="30px 0"
+							>
 								<Text fontSize="sm">
-									Don't have an account?{' '}
+									Already have an account?{' '}
 									<Link
 										type="primary"
-										onClick={() => navigate('/register')}>
-										Sign up
+										onClick={() => navigate('/login')}
+									>
+										Login
 									</Link>
 								</Text>
 							</Wrapper>
@@ -93,11 +99,11 @@ export const Login = () => {
 								<Button
 									buttonType="submit"
 									type={TYPES.PRIMARY}
-									text="Login"
+									text="Register"
 									width="30%"
 									height="50px"
 									letterSpacing="2px"
-									onClick={() => console.log('login')}
+									onClick={() => console.log('register')}
 								/>
 							</Wrapper>
 						</Form>
