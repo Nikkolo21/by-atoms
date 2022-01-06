@@ -27,14 +27,21 @@ export type InputType =
 	| 'week';
 
 export interface InputProps {
+	id?: string;
 	size?: Sizes;
 	placeholder?: string;
 	disabled?: boolean;
-	onChange: () => void;
+	onChange?: () => void;
 	width?: string;
 	height?: string;
 	padding?: string;
 	fontSize?: Sizes;
 	type?: InputType;
+	value?: string;
+	min?: string;
+	max?: string;
+	checked?: boolean;
+	accept?: string;
+	src?: string;
 	noBorder?: boolean;
 }

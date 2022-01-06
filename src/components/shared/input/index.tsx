@@ -7,6 +7,7 @@ import { InputProps } from './types';
 export const Input: React.FC<InputProps> = ({
 	size = SIZES.MD,
 	placeholder = 'Insert element',
+	id,
 	disabled,
 	onChange,
 	width,
@@ -14,6 +15,12 @@ export const Input: React.FC<InputProps> = ({
 	padding,
 	fontSize = SIZES.NORMAL,
 	type,
+	value,
+	checked,
+	min,
+	max,
+	accept,
+	src,
 	noBorder,
 }) => {
 	const setInputSize = (size: Sizes, fontSize: Sizes) => {
@@ -45,9 +52,16 @@ export const Input: React.FC<InputProps> = ({
 				setInputSize(size, fontSize),
 			].join(' ')}
 			style={{ width, padding, height }}
+			id={id}
 			placeholder={placeholder}
 			onChange={onChange}
 			type={type}
+			value={value}
+			checked={checked}
+			min={min}
+			max={max}
+			accept={accept}
+			src={src}
 			disabled={disabled}
 		/>
 	);
