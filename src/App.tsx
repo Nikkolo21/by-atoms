@@ -8,7 +8,7 @@ import { Login } from './components/login';
 import { Design } from './components/design/index';
 import { Register } from './components/register';
 import { Home } from './components/home';
-import '../index.css';
+import './index.css';
 import './styles/output.css';
 
 function App() {
