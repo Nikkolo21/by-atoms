@@ -1,6 +1,6 @@
 import { Types } from "../types";
 
 export interface LinkProps {
-    type?: Types;
-    onClick: () => void;
+  type?: Types;
+  onClick: () => void;
 }

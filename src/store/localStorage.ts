@@ -3,7 +3,7 @@
  * @param {string} key - key for storing
  * @param {Object} data - serializable object
  */
- export const write = (key: any, data: any) => {
+export const write = (key: any, data: any) => {
   try {
     localStorage.setItem(key, JSON.stringify(data));
     // eslint-disable-next-line no-empty

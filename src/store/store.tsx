@@ -1,12 +1,12 @@
-import { createStore, applyMiddleware, compose } from 'redux';
-import createSagaMiddleware from 'redux-saga';
-import { routerMiddleware } from 'connected-react-router';
-import { createBrowserHistory } from 'history';
+import { createStore, applyMiddleware, compose } from "redux";
+import createSagaMiddleware from "redux-saga";
+import { routerMiddleware } from "connected-react-router";
+import { createBrowserHistory } from "history";
 // Import reducers and sagas
-import { rootReducer } from './reducers';
+import { rootReducer } from "./reducers";
 //import sagas from './sagas';
-import { persistStore } from './persistor';
-import thunk from 'redux-thunk'
+import { persistStore } from "./persistor";
+import thunk from "redux-thunk";
 
 // Middlewares
 const sagaMiddleware = createSagaMiddleware();
@@ -19,15 +19,18 @@ declare global {
   }
 }
 let composeEnhancers = compose;
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === "development") {
   /* eslint-disable no-underscore-dangle */
 
- composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+  composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
   /* eslint-enable */
 }
 
 // Export store
-const store = createStore(rootReducer(), composeEnhancers(applyMiddleware(...middlewares)));
+const store = createStore(
+  rootReducer(),
+  composeEnhancers(applyMiddleware(...middlewares))
+);
 
 //sagas(sagaMiddleware);
 persistStore(store);

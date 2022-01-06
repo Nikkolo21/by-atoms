@@ -1,9 +1,9 @@
-import { GET_PRODUCTS, SELECT_TYPE } from '../actions/products';
-import { ProductsReducerState } from '../types';
+import { GET_PRODUCTS, SELECT_TYPE } from "../actions/products";
+import { ProductsReducerState } from "../types";
 
 const initialState: ProductsReducerState = {
   list: [],
-  selectedType: 'all',
+  selectedType: "all",
 };
 
 const reducer = (state = initialState, action: any) => {

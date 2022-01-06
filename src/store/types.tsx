@@ -1,4 +1,4 @@
-import { Selector } from 'reselect';
+import { Selector } from "reselect";
 
 export type ProductsReducerState = {
   list: any[];
