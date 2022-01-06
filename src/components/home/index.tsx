@@ -25,7 +25,7 @@ export const Home = () => {
 					onClick={() => navigate('/login')}
 					width="150px"
 					letterSpacing="1px"
-					fontSize="xs"
+					fontSize="sm"
 					type={TYPES.PRIMARY}
 					text="Login"
 				/>
