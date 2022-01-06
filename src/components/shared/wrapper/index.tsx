@@ -4,8 +4,10 @@ import { WrapperProps, DISPLAY, FLEX_DIRECTION, POSITION_ITEM } from './types';
 export const Wrapper: React.FC<WrapperProps> = ({
     width,
     maxWidth,
+    borderRadius,
     height,
     padding,
+    margin,
     backgroundColor,
     display = DISPLAY.FLEX,
     flexDirection = FLEX_DIRECTION.ROW,
@@ -33,7 +35,7 @@ export const Wrapper: React.FC<WrapperProps> = ({
             'h-fit',
             ...setDisplay(),
         ].join(' ')}
-        style={{backgroundColor, height, width, maxWidth, padding}}>
+        style={{backgroundColor, height, width, maxWidth, padding, margin, borderRadius}}>
             {children}
         </div>
     )

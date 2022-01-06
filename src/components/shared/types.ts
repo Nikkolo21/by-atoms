@@ -1,12 +1,14 @@
-export type Sizes = 'xl' | 'lg' | 'md' | 'normal'| 'sm' | 'xs';
+export type Sizes = 'xl' | 'xxl' | 'lg' | 'md' | 'normal'| 'sm' | 'xs' | 'xxs';
 
 export enum SIZES {
+    XXL = 'xxl',
     XL = 'xl',
     LG = 'lg',
     MD = 'md',
     NORMAL = 'normal',
     SM = 'sm',
     XS = 'xs',
+    XXS = 'xxs',
 }
 
 export enum TYPES {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Text } from '../text';
 import { Sizes, SIZES, Types, TYPES } from '../types';
 import { ButtonProps } from './types';
 
@@ -6,11 +7,13 @@ export const Button: React.FC<ButtonProps> = ({
     size = SIZES.MD,
     text,
     disabled,
+    buttonType,
     type = TYPES.PRIMARY,
     backgroundColor,
     width,
     height,
-    fontSize = SIZES.NORMAL,
+    letterSpacing,
+    fontSize = SIZES.SM,
     onClick,
 }) => {
     const setButtonType = (type: Types) => {
@@ -35,17 +38,17 @@ export const Button: React.FC<ButtonProps> = ({
     const setButtonSize = (size: Sizes, fontSize: Sizes) => {
         switch(size) {
             case SIZES.XL:
-                return ['px-12', 'py-4', `text-${fontSize}`];
+                return ['px-12', 'py-4'];
             case SIZES.LG:
-                return ['px-10', 'py-4', `text-${fontSize}`];
+                return ['px-10', 'py-4'];
             case SIZES.MD:
-                return ['px-8', 'py-3', `text-${fontSize}`];
+                return ['px-8', 'py-3'];
             case SIZES.SM:
-                return ['px-4', 'py-2', `text-${fontSize}`];
+                return ['px-4', 'py-2'];
             case SIZES.XS:
-                return ['px-3', 'py-1', `text-${fontSize}`];
+                return ['px-3', 'py-1'];
             default:
-                return ['px-8', 'py-3', `text-${fontSize}`];
+                return ['px-8', 'py-3'];
         }
     }
 
@@ -62,8 +65,11 @@ export const Button: React.FC<ButtonProps> = ({
             disabled={disabled}
             style={{backgroundColor, width, height}}
             onClick={onClick}
+            type={buttonType}
         >
-            {text}
+            <Text fontSize={fontSize} letterSpacing={letterSpacing}>
+                {text}
+            </Text>
         </button>
     )
 }

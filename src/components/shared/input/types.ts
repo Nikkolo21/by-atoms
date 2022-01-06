@@ -4,13 +4,16 @@ export type InputType = 'button' |'checkbox' | 'color' | 'date' | 'datetime-loca
 
 export interface InputProps {
     size?: Sizes;
+    name: string;
     placeholder?: string;
     disabled?: boolean;
-    onChange: () => void;
+    onChange: any;
+    onBlur?: any;
     width?: string;
     height?: string;
     padding?: string;
     fontSize?: Sizes;
     type?: InputType;
     noBorder?: boolean;
+    value: any;
 }

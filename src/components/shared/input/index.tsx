@@ -4,13 +4,16 @@ import { InputProps } from './types';
 
 export const Input: React.FC<InputProps> = ({
     size = SIZES.MD,
+    value,
     placeholder = 'Insert element',
     disabled,
     onChange,
+    onBlur,
     width,
+    name,
     height,
     padding,
-    fontSize = SIZES.NORMAL,
+    fontSize = SIZES.SM,
     type,
     noBorder,
 }) => {
@@ -36,7 +39,7 @@ export const Input: React.FC<InputProps> = ({
                 'placeholder-shown:uppercase',
                 'bg-white',
                 noBorder ? 'border-0' :  'border',
-                'border-grey',
+                'border-opacityGrey',
                 'rounded-button-md',
                 'active:border-primary',
                 'focus-visible:border-primary',
@@ -45,8 +48,11 @@ export const Input: React.FC<InputProps> = ({
             style={{width, padding, height}}
             placeholder={placeholder}
             onChange={onChange}
+            onBlur={onBlur}
             type={type}
             disabled={disabled}
+            value={value}
+            name={name}
         />
     )
 }

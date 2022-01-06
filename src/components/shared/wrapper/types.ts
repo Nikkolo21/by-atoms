@@ -25,7 +25,9 @@ export interface WrapperProps {
     width?: string;
     maxWidth?: string;
     height?: string;
+    borderRadius?: string;
     padding?: string;
+    margin?: string;
     backgroundColor?: string;
     flexDirection?: FlexPosition;
     justifyItems?: PositionItems;

@@ -8,7 +8,7 @@ import { Wrapper } from '../shared/wrapper';
 import { Link } from '../shared/link';
 import { Text } from '../shared/text';
 
-export const Login = () => {
+export const Register = () => {
     const navigate = useNavigate();
     return (
         <Wrapper display='grid' placeItems='center' height='100%'>
@@ -42,10 +42,10 @@ export const Login = () => {
                                 <Input onChange={handleChange} onBlur={handleBlur} value={values.password} name='password' type='password' width='70%' height='70%' placeholder='Password' />
                             </Wrapper>
                             <Wrapper display='grid' placeItems='center' padding='30px 0'>
-                                <Text fontSize='sm'>Don't have an account? <Link type='primary' onClick={() => navigate('/register')}>Sign up</Link></Text>
+                                <Text fontSize='sm'>Already have an account? <Link type='primary' onClick={() => navigate('/login')}>Login</Link></Text>
                             </Wrapper>
                             <Wrapper display='grid' placeItems='center'>
-                                <Button buttonType='submit' type={TYPES.PRIMARY} text='Login' width='30%' height='50px' letterSpacing='2px' onClick={() => console.log('login')} />
+                                <Button buttonType='submit' type={TYPES.PRIMARY} text='Register' width='30%' height='50px' letterSpacing='2px' onClick={() => console.log('register')} />
                             </Wrapper>
                         </Form>
                     )}
