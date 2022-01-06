@@ -1,10 +1,12 @@
-import { combineReducers } from "redux";
-import products from "./reducers/products";
-import { RootReducer } from "./types";
+/** @format */
+
+import { combineReducers } from 'redux';
+import products from './reducers/products';
+import { RootReducer } from './types';
 
 const rootReducer = () =>
-  combineReducers<RootReducer>({
-    products,
-  });
+	combineReducers<RootReducer>({
+		products,
+	});
 
 export { rootReducer };
