@@ -14,9 +14,9 @@ export const Register = () => {
     <Wrapper display="grid" placeItems="center" height="100%">
       <Wrapper
         borderRadius="10px"
-        padding="120px 0"
+        padding="100px 0"
         width="100%"
-        maxWidth="800px"
+        maxWidth="600px"
         backgroundColor="#FFF8F3"
         display="grid"
         placeItems="center"
@@ -50,7 +50,7 @@ export const Register = () => {
                   value={values.email}
                   name="email"
                   type="email"
-                  width="70%"
+                  width="80%"
                   height="70%"
                   placeholder="Email"
                 />
@@ -62,7 +62,7 @@ export const Register = () => {
                   value={values.password}
                   name="password"
                   type="password"
-                  width="70%"
+                  width="80%"
                   height="70%"
                   placeholder="Password"
                 />
