@@ -28,6 +28,7 @@ module.exports = {
       white: '#ffffff',
       grey: '#a4adb5',
       opacityGrey: 'rgba(10, 10, 10, 0.1)',
+      lightGrey: 'rgba(10, 10, 10, 0.08)',
       greyTransparent: 'rgba(0,0,0,0.4)',
     },
     extend: {
