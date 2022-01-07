@@ -30,10 +30,12 @@ export interface WrapperProps {
 	borderRadius?: string;
 	padding?: string;
 	margin?: string;
+	flex?: string;
 	gap?: string;
 	backgroundColor?: string;
 	flexDirection?: FlexPosition;
 	justifyItems?: PositionItems;
 	placeItems?: PositionItems;
 	justifyContent?: PositionItems;
+	className?: string;
 }

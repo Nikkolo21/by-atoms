@@ -8,6 +8,9 @@ import { Login } from './components/login';
 import { Design } from './components/design/index';
 import { Register } from './components/register';
 import { Home } from './components/home';
+import { Projects } from './components/projects';
+import { AuthenticatedHeader } from './components/authenticatedHeader';
+import { UnauthenticatedHeader } from './components/unauthenticatedHeader';
 import './index.css';
 import './styles/output.css';
 
@@ -18,9 +21,15 @@ function App() {
 				<Routes>
 					<Route path="/login" element={<Login />} />
 					<Route path="/register" element={<Register />} />
-					<Route path="/" element={<Home />}></Route>
-					<Route path="/design" element={<Design />} />
+					<Route element={<UnauthenticatedHeader />}>
+						<Route path="/" element={<Home />}></Route>
+					</Route>
+					<Route element={<AuthenticatedHeader />}>
+						<Route path="/design" element={<Design />} />
+						<Route path="/dashboard" element={<Projects />} />
+					</Route>
 				</Routes>
+				
 			</div>
 		</Provider>
 	);
