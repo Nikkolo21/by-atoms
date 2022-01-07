@@ -11,6 +11,8 @@ import { Home } from './components/home';
 import { Projects } from './components/projects';
 import { AuthenticatedHeader } from './components/authenticatedHeader';
 import { UnauthenticatedHeader } from './components/unauthenticatedHeader';
+import { Profile } from './components/profile';
+import { Configuration } from './components/configuration';
 import './index.css';
 import './styles/output.css';
 
@@ -27,9 +29,10 @@ function App() {
 					<Route element={<AuthenticatedHeader />}>
 						<Route path="/design" element={<Design />} />
 						<Route path="/dashboard" element={<Projects />} />
+						<Route path="/profile" element={<Profile />} />
+						<Route path="/config" element={<Configuration />} />
 					</Route>
 				</Routes>
-				
 			</div>
 		</Provider>
 	);

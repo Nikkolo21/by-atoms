@@ -10,17 +10,23 @@ export const FloatMenu: React.FC<{element: ReactElement}> = ({element}) => {
     return (
         <div className='relative cursor-pointer h-6' onClick={openMenu} onMouseLeave={closeMenu}>
             {element}
-            <div hidden={!menuIsOpen} className='absolute bottom-auto right-0 z-10 h-auto w-64 p-2'>
+            <div hidden={!menuIsOpen} className='absolute bottom-auto right-0 z-10 h-auto w-64 p-1'>
                 <div className='w-full h-full bg-white rounded-md border border-opacityGrey p-2'>
-                    <Wrapper className='hover:bg-opacityGrey w-full h-full grid place-items-center' height='50px' display='grid' placeItems='center'>
-                        Profile
-                    </Wrapper>
-                    <Wrapper className='hover:bg-opacityGrey w-full h-full grid place-items-center' height='50px' display='grid' placeItems='center'>
-                        Configuration
-                    </Wrapper>
-                    <Wrapper className='hover:bg-opacityGrey w-full h-full grid place-items-center' height='50px' display='grid' placeItems='center'>
-                        <Link to="/">Logout</Link>
-                    </Wrapper>
+                    <Link to="/profile">
+                        <Wrapper className='hover:bg-opacityGrey w-full h-full grid place-items-center' height='50px' display='grid' placeItems='center'>
+                            Profile
+                        </Wrapper>
+                    </Link>
+                    <Link to="/config">
+                        <Wrapper className='hover:bg-opacityGrey w-full h-full grid place-items-center' height='50px' display='grid' placeItems='center'>
+                            Configuration
+                        </Wrapper>
+                    </Link>
+                    <Link to="/">
+                        <Wrapper className='hover:bg-opacityGrey w-full h-full grid place-items-center' height='50px' display='grid' placeItems='center'>
+                            Logout
+                        </Wrapper>
+                    </Link>
                 </div>
             </div>
         </div>
