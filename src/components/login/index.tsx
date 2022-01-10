@@ -41,10 +41,9 @@ export const Login = () => {
 						return errors;
 					}}
 					onSubmit={(values, { setSubmitting }) => {
-						setTimeout(() => {
-							console.log(values);
-							setSubmitting(false);
-						}, 400);
+						console.log(values);
+						setSubmitting(false);
+						navigate('/dashboard');
 					}}
 				>
 					{({ values, isSubmitting, handleChange, handleBlur }) => (
@@ -104,7 +103,6 @@ export const Login = () => {
 									width="30%"
 									height="50px"
 									letterSpacing="2px"
-									onClick={() => console.log('login')}
 								/>
 							</Wrapper>
 							<Wrapper

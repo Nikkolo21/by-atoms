@@ -26,8 +26,11 @@ export interface WrapperProps {
 	display?: Display;
 	width?: string;
 	maxWidth?: string;
+	maxHeight?: string;
 	height?: string;
+	boxShadow?: string;
 	borderRadius?: string;
+	position?: 'static' | 'relative' | 'absolute' | 'sticky' | 'fixed';
 	padding?: string;
 	margin?: string;
 	flex?: string;

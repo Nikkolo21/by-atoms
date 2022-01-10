@@ -6,10 +6,11 @@ import { TextProps } from './types';
 export const Text: React.FC<TextProps> = ({
 	children,
 	fontSize,
+	fontWeight,
 	letterSpacing,
 }) => {
 	return (
-		<div className={`text-${fontSize}`} style={{ letterSpacing }}>
+		<div className={`text-${fontSize} font-${fontWeight}`} style={{ letterSpacing }}>
 			{children}
 		</div>
 	);
