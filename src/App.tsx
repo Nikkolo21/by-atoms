@@ -12,6 +12,7 @@ import { Projects } from './components/projects';
 import { AuthenticatedHeader } from './components/authenticatedHeader';
 import { UnauthenticatedHeader } from './components/unauthenticatedHeader';
 import { Profile } from './components/profile';
+import { Project } from './components/project';
 import { Configuration } from './components/configuration';
 import './index.css';
 import './styles/output.css';
@@ -29,6 +30,7 @@ function App() {
 					<Route element={<AuthenticatedHeader />}>
 						<Route path="/design" element={<Design />} />
 						<Route path="/dashboard" element={<Projects />} />
+						<Route path="/project/:id" element={<Project />} />
 						<Route path="/profile" element={<Profile />} />
 						<Route path="/config" element={<Configuration />} />
 					</Route>
