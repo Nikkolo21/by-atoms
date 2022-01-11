@@ -58,7 +58,7 @@ export const Login = () => {
 									<img
 										src={isotipo}
 										style={{
-											height: '-webkit-fill-available',
+											height: '100%',
 										}}
 									/>
 								</Link>

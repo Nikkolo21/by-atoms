@@ -54,7 +54,9 @@ export const AuthenticatedHeader = () => {
                     </Wrapper>
                 </Wrapper>
             </Header>
-            <Outlet />
+            <Wrapper padding='40px' display='grid' placeItems='center'>
+                <Outlet />
+            </Wrapper>
         </>
     )
 }

@@ -29,7 +29,9 @@ export const UnauthenticatedHeader = () => {
 					/>
 				</Wrapper>
 			</Header>
-            <Outlet />
+			<Wrapper padding='40px' display='grid' placeItems='center'>
+            	<Outlet />
+			</Wrapper>
 		</>
     )
 }

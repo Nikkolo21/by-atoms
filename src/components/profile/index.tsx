@@ -1,9 +1,10 @@
 import React from 'react';
+import { Wrapper } from '../shared/wrapper';
 
 export const Profile = () => {
     return (
-        <div>
+        <Wrapper>
             this is the profile
-        </div>
+        </Wrapper>
     )
 }

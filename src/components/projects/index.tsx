@@ -26,7 +26,7 @@ const projects = [
 export const Projects = () => {
 	const navigate = useNavigate();
     return (
-        <Wrapper padding='40px' display='grid' placeItems='center'>
+        <>
             <Wrapper justifyContent='end' width='100%' maxWidth='1280px'>
                 <Button width='160px' size='sm' fontSize='sm' letterSpacing='1px' text='Create project' />
             </Wrapper>
@@ -54,6 +54,6 @@ export const Projects = () => {
                     }
                 </Wrapper>
             </Wrapper>
-        </Wrapper>
+        </>
     )
 }

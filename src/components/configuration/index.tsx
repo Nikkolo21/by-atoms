@@ -1,9 +1,10 @@
 import React from 'react';
+import { Wrapper } from '../shared/wrapper';
 
 export const Configuration = () => {
     return (
-        <div>
+        <Wrapper>
             this is configuration
-        </div>
+        </Wrapper>
     )
 }

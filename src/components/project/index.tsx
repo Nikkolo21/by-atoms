@@ -1,11 +1,12 @@
 import React from 'react';
 import { useParams } from 'react-router';
+import { Wrapper } from '../shared/wrapper';
 
 export const Project = () => {
     const { id } = useParams();
     return (
-        <div>
+        <Wrapper>
             {id}
-        </div>
+        </Wrapper>
     )
 }
