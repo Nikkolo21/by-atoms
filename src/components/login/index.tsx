@@ -9,6 +9,7 @@ import { TYPES } from '../shared/types';
 import { Wrapper } from '../shared/wrapper';
 import { Link } from '../shared/link';
 import { Text } from '../shared/text';
+import { default as isotipo } from '../../assets/isotipoV1.svg';
 
 export const Login = () => {
 	const navigate = useNavigate();
@@ -16,12 +17,13 @@ export const Login = () => {
 		<Wrapper display="grid" placeItems="center" height="100%">
 			<Wrapper
 				borderRadius="10px"
-				padding="100px 0"
+				padding="50px 0"
 				width="100%"
 				maxWidth="600px"
 				backgroundColor="#FFF8F3"
 				display="grid"
-				placeItems="center">
+				placeItems="center"
+			>
 				<Formik
 					initialValues={{ email: '', password: '' }}
 					validate={(values) => {
@@ -39,17 +41,33 @@ export const Login = () => {
 						return errors;
 					}}
 					onSubmit={(values, { setSubmitting }) => {
-						setTimeout(() => {
-							console.log({ values });
-							setSubmitting(false);
-						}, 400);
-					}}>
+						console.log(values);
+						setSubmitting(false);
+						navigate('/dashboard');
+					}}
+				>
 					{({ values, isSubmitting, handleChange, handleBlur }) => (
 						<Form style={{ width: '100%' }}>
 							<Wrapper
+								height="200px"
+								display="flex"
+								justifyContent="center"
+								margin="0 0 20px 0"
+							>
+								<Link onClick={() => navigate('/')}>
+									<img
+										src={isotipo}
+										style={{
+											height: '100%',
+										}}
+									/>
+								</Link>
+							</Wrapper>
+							<Wrapper
 								height="80px"
 								display="grid"
-								placeItems="center">
+								placeItems="center"
+							>
 								<Input
 									onChange={handleChange}
 									onBlur={handleBlur}
@@ -64,7 +82,8 @@ export const Login = () => {
 							<Wrapper
 								height="80px"
 								display="grid"
-								placeItems="center">
+								placeItems="center"
+							>
 								<Input
 									onChange={handleChange}
 									onBlur={handleBlur}
@@ -76,20 +95,7 @@ export const Login = () => {
 									placeholder="Password"
 								/>
 							</Wrapper>
-							<Wrapper
-								display="grid"
-								placeItems="center"
-								padding="30px 0">
-								<Text fontSize="sm">
-									Don't have an account?{' '}
-									<Link
-										type="primary"
-										onClick={() => navigate('/register')}>
-										Sign up
-									</Link>
-								</Text>
-							</Wrapper>
-							<Wrapper display="grid" placeItems="center">
+							<Wrapper display="grid" placeItems="center" margin='10px 0 0 0'>
 								<Button
 									buttonType="submit"
 									type={TYPES.PRIMARY}
@@ -97,8 +103,22 @@ export const Login = () => {
 									width="30%"
 									height="50px"
 									letterSpacing="2px"
-									onClick={() => console.log('login')}
 								/>
+							</Wrapper>
+							<Wrapper
+								display="grid"
+								placeItems="center"
+								padding="20px 0"
+							>
+								<Text fontSize="sm">
+									Don't have an account?{' '}
+									<Link
+										type="primary"
+										onClick={() => navigate('/register')}
+									>
+										Sign up
+									</Link>
+								</Text>
 							</Wrapper>
 						</Form>
 					)}

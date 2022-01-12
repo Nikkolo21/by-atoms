@@ -10,7 +10,8 @@ export const TestIcon = ({ height = '24px', width = '24px' }) => {
 			height={height}
 			fill="none"
 			viewBox="0 0 24 24"
-			stroke="currentColor">
+			stroke="currentColor"
+		>
 			<path
 				strokeLinecap="round"
 				strokeLinejoin="round"

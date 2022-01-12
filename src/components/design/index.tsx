@@ -184,7 +184,8 @@ export const Design = () => {
 							flexDirection="col"
 							justifyContent="center"
 							width="min-content"
-							gap="5px">
+							gap="5px"
+						>
 							<label htmlFor="button">Button</label>
 							<Input
 								type="button"
@@ -201,7 +202,8 @@ export const Design = () => {
 							flexDirection="col"
 							justifyContent="center"
 							width="min-content"
-							gap="5px">
+							gap="5px"
+						>
 							<label htmlFor="checkbox">Checkbox</label>
 							<Input type="checkbox" id="checkbox" />
 						</Wrapper>
@@ -209,7 +211,8 @@ export const Design = () => {
 							flexDirection="col"
 							justifyContent="center"
 							width="min-content"
-							gap="5px">
+							gap="5px"
+						>
 							<label htmlFor="color">Color</label>
 							<Input
 								type="color"
@@ -224,7 +227,8 @@ export const Design = () => {
 							flexDirection="col"
 							justifyContent="center"
 							width="min-content"
-							gap="5px">
+							gap="5px"
+						>
 							<label htmlFor="date">Date</label>
 							<Input
 								type="date"
@@ -237,7 +241,8 @@ export const Design = () => {
 							flexDirection="col"
 							justifyContent="center"
 							width="min-content"
-							gap="5px">
+							gap="5px"
+						>
 							<label htmlFor="datetime-local">
 								Datetime-local
 							</label>
@@ -255,7 +260,8 @@ export const Design = () => {
 							flexDirection="col"
 							justifyContent="center"
 							width="min-content"
-							gap="5px">
+							gap="5px"
+						>
 							<label htmlFor="email">Email</label>
 							<Input
 								type="email"
@@ -267,7 +273,8 @@ export const Design = () => {
 							flexDirection="col"
 							justifyContent="center"
 							width="min-content"
-							gap="5px">
+							gap="5px"
+						>
 							<label htmlFor="file">File</label>
 							<Input
 								type="file"
@@ -279,7 +286,8 @@ export const Design = () => {
 							flexDirection="col"
 							justifyContent="center"
 							width="min-content"
-							gap="5px">
+							gap="5px"
+						>
 							<label htmlFor="month">Month</label>
 							<Input
 								type="month"
@@ -294,7 +302,8 @@ export const Design = () => {
 							flexDirection="col"
 							justifyContent="center"
 							width="min-content"
-							gap="5px">
+							gap="5px"
+						>
 							<label htmlFor="number">Number</label>
 							<Input
 								type="number"
@@ -308,7 +317,8 @@ export const Design = () => {
 							flexDirection="col"
 							justifyContent="center"
 							width="min-content"
-							gap="5px">
+							gap="5px"
+						>
 							<label htmlFor="password">Password</label>
 							<Input
 								type="password"
@@ -320,7 +330,8 @@ export const Design = () => {
 							flexDirection="col"
 							justifyContent="center"
 							width="min-content"
-							gap="5px">
+							gap="5px"
+						>
 							<label htmlFor="radioInput">Radio</label>
 							<Input type="radio" name="radio" value="Option1" />
 							<Input type="radio" name="radio" value="Option2" />
@@ -329,7 +340,8 @@ export const Design = () => {
 							flexDirection="col"
 							justifyContent="center"
 							width="min-content"
-							gap="5px">
+							gap="5px"
+						>
 							<label htmlFor="range">Range</label>
 							<Input type="range" id="range" min="0" max="10" />
 						</Wrapper>
@@ -337,7 +349,8 @@ export const Design = () => {
 							flexDirection="col"
 							justifyContent="center"
 							width="min-content"
-							gap="5px">
+							gap="5px"
+						>
 							<label htmlFor="reset">Reset</label>
 							<Input type="reset" id="reset" value="Reset" />
 						</Wrapper>
@@ -347,7 +360,8 @@ export const Design = () => {
 							flexDirection="col"
 							justifyContent="center"
 							width="min-content"
-							gap="5px">
+							gap="5px"
+						>
 							<label htmlFor="search">Search</label>
 							<Input type="search" id="search" />
 						</Wrapper>
@@ -355,7 +369,8 @@ export const Design = () => {
 							flexDirection="col"
 							justifyContent="center"
 							width="min-content"
-							gap="5px">
+							gap="5px"
+						>
 							<label htmlFor="submit">Submit</label>
 							<Input type="submit" id="submit" value="Submit" />
 						</Wrapper>
@@ -363,7 +378,8 @@ export const Design = () => {
 							flexDirection="col"
 							justifyContent="center"
 							width="min-content"
-							gap="5px">
+							gap="5px"
+						>
 							<label htmlFor="tel">Telephone</label>
 							<Input
 								type="tel"
@@ -375,7 +391,8 @@ export const Design = () => {
 							flexDirection="col"
 							justifyContent="center"
 							width="min-content"
-							gap="5px">
+							gap="5px"
+						>
 							<label htmlFor="text">Text</label>
 							<Input type="text" id="text" />
 						</Wrapper>
@@ -383,7 +400,8 @@ export const Design = () => {
 							flexDirection="col"
 							justifyContent="center"
 							width="min-content"
-							gap="5px">
+							gap="5px"
+						>
 							<label htmlFor="time">Time</label>
 							<Input
 								type="time"
@@ -398,7 +416,8 @@ export const Design = () => {
 							flexDirection="col"
 							justifyContent="center"
 							width="min-content"
-							gap="5px">
+							gap="5px"
+						>
 							<label htmlFor="url">Url</label>
 							<Input
 								type="url"
@@ -410,7 +429,8 @@ export const Design = () => {
 							flexDirection="col"
 							justifyContent="center"
 							width="min-content"
-							gap="5px">
+							gap="5px"
+						>
 							<label htmlFor="week">Week</label>
 							<Input
 								type="week"
@@ -437,7 +457,8 @@ export const Design = () => {
 								<div style={{ height: '400px' }}>
 									Modal content
 								</div>
-							}>
+							}
+						>
 							<Button
 								type={TYPES.PRIMARY}
 								text="Open Modal"

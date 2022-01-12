@@ -26,14 +26,19 @@ export interface WrapperProps {
 	display?: Display;
 	width?: string;
 	maxWidth?: string;
+	maxHeight?: string;
 	height?: string;
+	boxShadow?: string;
 	borderRadius?: string;
+	position?: 'static' | 'relative' | 'absolute' | 'sticky' | 'fixed';
 	padding?: string;
 	margin?: string;
+	flex?: string;
 	gap?: string;
 	backgroundColor?: string;
 	flexDirection?: FlexPosition;
 	justifyItems?: PositionItems;
 	placeItems?: PositionItems;
 	justifyContent?: PositionItems;
+	className?: string;
 }

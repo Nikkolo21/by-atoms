@@ -69,7 +69,8 @@ export const Button: React.FC<ButtonProps> = ({
 			].join(' ')}
 			style={{ backgroundColor, width, height }}
 			onClick={disabled ? () => {} : onClick}
-			type={buttonType}>
+			type={buttonType}
+		>
 			{icon}
 			<Text fontSize={fontSize} letterSpacing={letterSpacing}>
 				{text}
