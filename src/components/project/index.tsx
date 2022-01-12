@@ -1,10 +1,12 @@
 import React from 'react';
+import { useParams } from 'react-router';
 import { Wrapper } from '../shared/wrapper';
 
-export const Profile = () => {
+export const Project = () => {
+    const { id } = useParams();
     return (
         <Wrapper>
-            this is the profile
+            {id}
         </Wrapper>
     )
 }

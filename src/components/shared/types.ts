@@ -2,6 +2,8 @@
 
 export type Sizes = 'xl' | 'xxl' | 'lg' | 'md' | 'normal' | 'sm' | 'xs' | 'xxs';
 
+export type Weights = 'light' | 'normal' | 'medium' | 'semibold' | 'bold';
+
 export enum SIZES {
 	XXL = 'xxl',
 	XL = 'xl',
