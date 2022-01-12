@@ -1,11 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
 import { Button } from '../shared/button';
-import { Text } from '../shared/text';
 import { Wrapper } from '../shared/wrapper';
-import { default as pencil } from '../../assets/pencil-white.svg';
+import { ProjectCard } from './projectCard';
+import { Project } from './types';
 
-const projects = [
+const projects: Project[] = [
     {
         title: 'Project 1',
         description: 'This is a description where I can describe what my project does and when to implement every atom or piece of this project in particular.',
@@ -35,23 +35,7 @@ export const Projects = () => {
                     Menu
                 </Wrapper>
                 <Wrapper flex='3' flexDirection='col' margin='20px 0 0 20px'>
-                    {
-                        projects.map(project => (
-                            <Wrapper key={project.id} className='relative' flexDirection='col' height='180px' borderRadius='10px' margin='0 0 20px 0' padding='40px' boxShadow='rgb(37 42 49 / 6%) 0px 4px 6px -2px, rgb(37 42 49 / 10%) 0px 10px 15px -3px, rgb(37 42 49 / 10%) 0px -1px 6px -2px'>
-                                <a className='cursor-pointer absolute z-10 top-6 right-4 opacity-80'>
-                                    <img src={pencil} width={20} />
-                                </a>
-                                <a onClick={() => navigate(`/project/${project.id}`)} className='flex-col cursor-pointer'>
-                                    <Wrapper margin='0 0 10px 0'>
-                                        <Text fontWeight='semibold' letterSpacing='.5px' fontSize='xl'>{project.title}</Text>
-                                    </Wrapper>
-                                    <Wrapper>
-                                        {project.description}
-                                    </Wrapper>
-                                </a>
-                            </Wrapper>
-                        ))
-                    }
+                    { projects.map(project => <ProjectCard project={project} />) }
                 </Wrapper>
             </Wrapper>
         </>
