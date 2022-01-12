@@ -10,6 +10,8 @@ import { Wrapper } from '../shared/wrapper';
 import { Input } from '../shared/input';
 import { Modal } from '../shared/modal';
 import { Accordion } from '../accordion';
+import { AtomCard } from '../shared/atom_card';
+import { default as test } from '../../assets/preview.jpeg';
 
 export const Design = () => {
 	const [openModal, setOpenModal] = useState(false);
@@ -445,6 +447,30 @@ export const Design = () => {
 						</Modal>
 					</Wrapper>
 				</Wrapper>
+			</Accordion>
+
+			<hr />
+
+			{/***** ATOM CARD *****/}
+			<Accordion text="Atom Card">
+				<div className="flex gap-[10px] px-8 flex-wrap">
+					<AtomCard
+						preview={test}
+						text="byAtoms"
+						description="A beautiful company with a bright future because Andres is thereA beautiful company with a bright future because Andres is there.A beautiful company with a bright future because Andres is there.A beautiful company with a bright future because Andres is there.A beautiful company with a bright future because Andres is there.A beautiful company with a bright future because Andres is there.">
+						<Button
+							type={TYPES.PRIMARY}
+							text="Button"
+							onClick={() =>
+								console.log('Primary button clicked')
+							}
+						/>
+					</AtomCard>
+					<AtomCard
+						preview={test}
+						text="byAtoms"
+						description="A beautiful company with a bright future because Andres is thereA beautiful company with a bright future because Andres is there.A beautiful company with a bright future because Andres is there.A beautiful company with a bright future because Andres is there.A beautiful company with a bright future because Andres is there.A beautiful company with a bright future because Andres is there."></AtomCard>
+				</div>
 			</Accordion>
 		</Wrapper>
 	);
