@@ -373,7 +373,7 @@ export const Design = () => {
 
 			{/***** ATOM CARD *****/}
 			<Accordion text="Atom Card">
-				<div className="gap-[10px] px-8 flex-wrap">
+				<div className="flex gap-[10px] px-8 flex-wrap">
 					<AtomCard
 						preview={test}
 						text="byAtoms"
