@@ -9,20 +9,15 @@ import { TYPES } from '../shared/types';
 import { Wrapper } from '../shared/wrapper';
 import { Link } from '../shared/link';
 import { Text } from '../shared/text';
+import { DISPLAY } from '../shared/wrapper/types';
 
 export const Register = () => {
 	const navigate = useNavigate();
 	return (
-		<Wrapper display="grid" placeItems="center" height="100%">
+		<Wrapper display={DISPLAY.GRID} className="place-items-center h-full">
 			<Wrapper
-				borderRadius="10px"
-				padding="100px 0"
-				width="100%"
-				maxWidth="600px"
-				backgroundColor="#FFF8F3"
-				display="grid"
-				placeItems="center"
-			>
+				display={DISPLAY.GRID}
+				className="place-items-center rounded-[10px] py-[100px] max-w-[600px] bg-[#FFF8F3]">
 				<Formik
 					initialValues={{ email: '', password: '' }}
 					validate={(values) => {
@@ -44,15 +39,12 @@ export const Register = () => {
 							console.log({ values });
 							setSubmitting(false);
 						}, 400);
-					}}
-				>
+					}}>
 					{({ values, isSubmitting, handleChange, handleBlur }) => (
-						<Form style={{ width: '100%' }}>
+						<Form className="w-full">
 							<Wrapper
-								height="80px"
-								display="grid"
-								placeItems="center"
-							>
+								display={DISPLAY.GRID}
+								className="place-items-center h-[80px]">
 								<Input
 									onChange={handleChange}
 									onBlur={handleBlur}
@@ -65,10 +57,8 @@ export const Register = () => {
 								/>
 							</Wrapper>
 							<Wrapper
-								height="80px"
-								display="grid"
-								placeItems="center"
-							>
+								display={DISPLAY.GRID}
+								className="place-items-center h-[80px]">
 								<Input
 									onChange={handleChange}
 									onBlur={handleBlur}
@@ -81,21 +71,20 @@ export const Register = () => {
 								/>
 							</Wrapper>
 							<Wrapper
-								display="grid"
-								placeItems="center"
-								padding="30px 0"
-							>
+								display={DISPLAY.GRID}
+								className="place-items-center py-[30px]">
 								<Text fontSize="sm">
 									Already have an account?{' '}
 									<Link
 										type="primary"
-										onClick={() => navigate('/login')}
-									>
+										onClick={() => navigate('/login')}>
 										Login
 									</Link>
 								</Text>
 							</Wrapper>
-							<Wrapper display="grid" placeItems="center">
+							<Wrapper
+								display={DISPLAY.GRID}
+								className="place-items-center">
 								<Button
 									buttonType="submit"
 									type={TYPES.PRIMARY}
