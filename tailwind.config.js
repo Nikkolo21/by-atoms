@@ -1,6 +1,7 @@
 /** @format */
 
 module.exports = {
+	mode: 'jit',
 	purge: ['./public/**/*.html', './src/**/*.{js,jsx,ts,tsx}'],
 	theme: {
 		screens: {
@@ -43,6 +44,12 @@ module.exports = {
 				grey: '#a4adb5',
 				opacityGrey: 'rgba(10, 10, 10, 0.1)',
 				greyTransparent: 'rgba(0,0,0,0.4)',
+				lightGrey: 'rgba(10, 10, 10, 0.06)',
+			},
+			flex: {
+				1: '1 1 0%',
+				2: '2 1 0%',
+				3: '3 1 0%',
 			},
 		},
 	},

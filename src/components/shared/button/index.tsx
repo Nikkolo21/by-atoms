@@ -6,6 +6,7 @@ import { Sizes, SIZES, Types, TYPES } from '../types';
 import { ButtonProps } from './types';
 
 export const Button: React.FC<ButtonProps> = ({
+	className,
 	size = SIZES.MD,
 	text,
 	disabled,
@@ -66,11 +67,11 @@ export const Button: React.FC<ButtonProps> = ({
 				`${icon && 'flex gap-2 items-center'}`,
 				...setButtonType(type),
 				...setButtonSize(size, fontSize),
+				className,
 			].join(' ')}
 			style={{ backgroundColor, width, height }}
 			onClick={disabled ? () => {} : onClick}
-			type={buttonType}
-		>
+			type={buttonType}>
 			{icon}
 			<Text fontSize={fontSize} letterSpacing={letterSpacing}>
 				{text}
