@@ -10,20 +10,15 @@ import { Wrapper } from '../shared/wrapper';
 import { Link } from '../shared/link';
 import { Text } from '../shared/text';
 import { default as isotipo } from '../../assets/isotipoV1.svg';
+import { DISPLAY } from '../shared/wrapper/types';
 
 export const Login = () => {
 	const navigate = useNavigate();
 	return (
-		<Wrapper display="grid" placeItems="center" height="100%">
+		<Wrapper display={DISPLAY.GRID} className="place-items-center h-full">
 			<Wrapper
-				borderRadius="10px"
-				padding="50px 0"
-				width="100%"
-				maxWidth="600px"
-				backgroundColor="#FFF8F3"
-				display="grid"
-				placeItems="center"
-			>
+				display={DISPLAY.GRID}
+				className="place-items-center rounded-[10px] py-[50px] max-w-[600px] bg-[#FFF8F3]">
 				<Formik
 					initialValues={{ email: '', password: '' }}
 					validate={(values) => {
@@ -44,30 +39,20 @@ export const Login = () => {
 						console.log(values);
 						setSubmitting(false);
 						navigate('/dashboard');
-					}}
-				>
+					}}>
 					{({ values, isSubmitting, handleChange, handleBlur }) => (
-						<Form style={{ width: '100%' }}>
-							<Wrapper
-								height="200px"
-								display="flex"
-								justifyContent="center"
-								margin="0 0 20px 0"
-							>
+						<Form className="w-full">
+							<Wrapper className="justify-center h-[200px] mb-[20px]">
 								<Link onClick={() => navigate('/')}>
 									<img
 										src={isotipo}
-										style={{
-											height: '100%',
-										}}
+										className="w-full h-full"
 									/>
 								</Link>
 							</Wrapper>
 							<Wrapper
-								height="80px"
-								display="grid"
-								placeItems="center"
-							>
+								display={DISPLAY.GRID}
+								className="h-[80px] place-items-center">
 								<Input
 									onChange={handleChange}
 									onBlur={handleBlur}
@@ -80,10 +65,8 @@ export const Login = () => {
 								/>
 							</Wrapper>
 							<Wrapper
-								height="80px"
-								display="grid"
-								placeItems="center"
-							>
+								display={DISPLAY.GRID}
+								className="h-[80px] place-items-center">
 								<Input
 									onChange={handleChange}
 									onBlur={handleBlur}
@@ -95,7 +78,9 @@ export const Login = () => {
 									placeholder="Password"
 								/>
 							</Wrapper>
-							<Wrapper display="grid" placeItems="center" margin='10px 0 0 0'>
+							<Wrapper
+								display={DISPLAY.GRID}
+								className="place-items-center mt-[10px]">
 								<Button
 									buttonType="submit"
 									type={TYPES.PRIMARY}
@@ -106,16 +91,13 @@ export const Login = () => {
 								/>
 							</Wrapper>
 							<Wrapper
-								display="grid"
-								placeItems="center"
-								padding="20px 0"
-							>
+								display={DISPLAY.GRID}
+								className="place-items-center py-[20px]">
 								<Text fontSize="sm">
 									Don't have an account?{' '}
 									<Link
 										type="primary"
-										onClick={() => navigate('/register')}
-									>
+										onClick={() => navigate('/register')}>
 										Sign up
 									</Link>
 								</Text>

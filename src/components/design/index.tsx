@@ -10,20 +10,22 @@ import { Wrapper } from '../shared/wrapper';
 import { Input } from '../shared/input';
 import { Modal } from '../shared/modal';
 import { Accordion } from '../accordion';
+import { AtomCard } from '../shared/atom_card';
+import { default as test } from '../../assets/preview.jpeg';
 
 export const Design = () => {
 	const [openModal, setOpenModal] = useState(false);
 
 	return (
-		<Wrapper flexDirection="col" gap="20px">
+		<Wrapper className="flex-col gap-[20px]">
 			<h1>Design System</h1>
 
 			<hr />
 
 			{/***** BUTTONS *****/}
 			<Accordion text="Buttons">
-				<Wrapper flexDirection="col" gap="20px">
-					<Wrapper justifyContent="center" gap="20px">
+				<Wrapper className="flex-col gap-[20px]">
+					<Wrapper className="justify-center gap-[20px]">
 						<Button
 							type={TYPES.PRIMARY}
 							text="Primary"
@@ -48,7 +50,7 @@ export const Design = () => {
 							disabled
 						/>
 					</Wrapper>
-					<Wrapper justifyContent="center" gap="20px">
+					<Wrapper className="justify-center gap-[20px]">
 						<Button
 							type={TYPES.SECONDARY}
 							text="Secondary"
@@ -73,7 +75,7 @@ export const Design = () => {
 							disabled
 						/>
 					</Wrapper>
-					<Wrapper justifyContent="center" gap="20px">
+					<Wrapper className="justify-center gap-[20px]">
 						<Button
 							type={TYPES.WHITE}
 							text="White"
@@ -92,7 +94,7 @@ export const Design = () => {
 							disabled
 						/>
 					</Wrapper>
-					<Wrapper justifyContent="center" gap="20px">
+					<Wrapper className="justify-center gap-[20px]">
 						<Button
 							type={TYPES.TERTIARY}
 							text="Tertiary"
@@ -117,7 +119,7 @@ export const Design = () => {
 							disabled
 						/>
 					</Wrapper>
-					<Wrapper justifyContent="center" gap="20px">
+					<Wrapper className="justify-center gap-[20px]">
 						<Button
 							type={TYPES.ERROR}
 							text="Error"
@@ -136,7 +138,7 @@ export const Design = () => {
 							disabled
 						/>
 					</Wrapper>
-					<Wrapper justifyContent="center" gap="20px">
+					<Wrapper className="justify-center gap-[20px]">
 						<Button
 							type={TYPES.BONE}
 							text="Bone"
@@ -162,7 +164,7 @@ export const Design = () => {
 
 			{/***** HEADER *****/}
 			<Accordion text="Header">
-				<Wrapper flexDirection="col" gap="20px">
+				<Wrapper className="flex-col gap-[20px]">
 					<Header>
 						<Link to="/design">Text Link</Link>
 						<Link to="/design">
@@ -176,14 +178,9 @@ export const Design = () => {
 
 			{/***** INPUT *****/}
 			<Accordion text="Input">
-				<Wrapper flexDirection="col" gap="20px">
-					<Wrapper justifyContent="center" gap="20px">
-						<Wrapper
-							flexDirection="col"
-							justifyContent="center"
-							width="min-content"
-							gap="5px"
-						>
+				<Wrapper className="flex-col gap-[20px]">
+					<Wrapper className="justify-center gap-[20px]">
+						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="button">Button</label>
 							<Input
 								type="button"
@@ -196,21 +193,11 @@ export const Design = () => {
 								}
 							/>
 						</Wrapper>
-						<Wrapper
-							flexDirection="col"
-							justifyContent="center"
-							width="min-content"
-							gap="5px"
-						>
+						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="checkbox">Checkbox</label>
 							<Input type="checkbox" id="checkbox" />
 						</Wrapper>
-						<Wrapper
-							flexDirection="col"
-							justifyContent="center"
-							width="min-content"
-							gap="5px"
-						>
+						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="color">Color</label>
 							<Input
 								type="color"
@@ -221,12 +208,7 @@ export const Design = () => {
 								padding="6px"
 							/>
 						</Wrapper>
-						<Wrapper
-							flexDirection="col"
-							justifyContent="center"
-							width="min-content"
-							gap="5px"
-						>
+						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="date">Date</label>
 							<Input
 								type="date"
@@ -235,12 +217,7 @@ export const Design = () => {
 								max="2030-12-31"
 							/>
 						</Wrapper>
-						<Wrapper
-							flexDirection="col"
-							justifyContent="center"
-							width="min-content"
-							gap="5px"
-						>
+						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="datetime-local">
 								Datetime-local
 							</label>
@@ -253,13 +230,8 @@ export const Design = () => {
 							/>
 						</Wrapper>
 					</Wrapper>
-					<Wrapper justifyContent="center" gap="20px">
-						<Wrapper
-							flexDirection="col"
-							justifyContent="center"
-							width="min-content"
-							gap="5px"
-						>
+					<Wrapper className="justify-center gap-[20px]">
+						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="email">Email</label>
 							<Input
 								type="email"
@@ -267,12 +239,7 @@ export const Design = () => {
 								placeholder="test@mail.com"
 							/>
 						</Wrapper>
-						<Wrapper
-							flexDirection="col"
-							justifyContent="center"
-							width="min-content"
-							gap="5px"
-						>
+						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="file">File</label>
 							<Input
 								type="file"
@@ -280,12 +247,7 @@ export const Design = () => {
 								accept="image/png, image/jpeg"
 							/>
 						</Wrapper>
-						<Wrapper
-							flexDirection="col"
-							justifyContent="center"
-							width="min-content"
-							gap="5px"
-						>
+						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="month">Month</label>
 							<Input
 								type="month"
@@ -295,13 +257,8 @@ export const Design = () => {
 							/>
 						</Wrapper>
 					</Wrapper>
-					<Wrapper justifyContent="center" gap="20px">
-						<Wrapper
-							flexDirection="col"
-							justifyContent="center"
-							width="min-content"
-							gap="5px"
-						>
+					<Wrapper className="justify-center gap-[20px]">
+						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="number">Number</label>
 							<Input
 								type="number"
@@ -311,12 +268,7 @@ export const Design = () => {
 								placeholder="15"
 							/>
 						</Wrapper>
-						<Wrapper
-							flexDirection="col"
-							justifyContent="center"
-							width="min-content"
-							gap="5px"
-						>
+						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="password">Password</label>
 							<Input
 								type="password"
@@ -324,60 +276,30 @@ export const Design = () => {
 								placeholder="******"
 							/>
 						</Wrapper>
-						<Wrapper
-							flexDirection="col"
-							justifyContent="center"
-							width="min-content"
-							gap="5px"
-						>
+						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="radioInput">Radio</label>
 							<Input type="radio" name="radio" value="Option1" />
 							<Input type="radio" name="radio" value="Option2" />
 						</Wrapper>
-						<Wrapper
-							flexDirection="col"
-							justifyContent="center"
-							width="min-content"
-							gap="5px"
-						>
+						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="range">Range</label>
 							<Input type="range" id="range" min="0" max="10" />
 						</Wrapper>
-						<Wrapper
-							flexDirection="col"
-							justifyContent="center"
-							width="min-content"
-							gap="5px"
-						>
+						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="reset">Reset</label>
 							<Input type="reset" id="reset" value="Reset" />
 						</Wrapper>
 					</Wrapper>
-					<Wrapper justifyContent="center" gap="20px">
-						<Wrapper
-							flexDirection="col"
-							justifyContent="center"
-							width="min-content"
-							gap="5px"
-						>
+					<Wrapper className="justify-center gap-[20px]">
+						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="search">Search</label>
 							<Input type="search" id="search" />
 						</Wrapper>
-						<Wrapper
-							flexDirection="col"
-							justifyContent="center"
-							width="min-content"
-							gap="5px"
-						>
+						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="submit">Submit</label>
 							<Input type="submit" id="submit" value="Submit" />
 						</Wrapper>
-						<Wrapper
-							flexDirection="col"
-							justifyContent="center"
-							width="min-content"
-							gap="5px"
-						>
+						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="tel">Telephone</label>
 							<Input
 								type="tel"
@@ -385,21 +307,11 @@ export const Design = () => {
 								placeholder="987654321"
 							/>
 						</Wrapper>
-						<Wrapper
-							flexDirection="col"
-							justifyContent="center"
-							width="min-content"
-							gap="5px"
-						>
+						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="text">Text</label>
 							<Input type="text" id="text" />
 						</Wrapper>
-						<Wrapper
-							flexDirection="col"
-							justifyContent="center"
-							width="min-content"
-							gap="5px"
-						>
+						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="time">Time</label>
 							<Input
 								type="time"
@@ -409,13 +321,8 @@ export const Design = () => {
 							/>
 						</Wrapper>
 					</Wrapper>
-					<Wrapper justifyContent="center" gap="20px">
-						<Wrapper
-							flexDirection="col"
-							justifyContent="center"
-							width="min-content"
-							gap="5px"
-						>
+					<Wrapper className="justify-center gap-[20px]">
+						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="url">Url</label>
 							<Input
 								type="url"
@@ -423,12 +330,7 @@ export const Design = () => {
 								placeholder="https://example.com"
 							/>
 						</Wrapper>
-						<Wrapper
-							flexDirection="col"
-							justifyContent="center"
-							width="min-content"
-							gap="5px"
-						>
+						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="week">Week</label>
 							<Input
 								type="week"
@@ -446,8 +348,8 @@ export const Design = () => {
 
 			{/***** MODAL *****/}
 			<Accordion text="Modal">
-				<Wrapper flexDirection="col" gap="20px">
-					<Wrapper justifyContent="center" gap="20px">
+				<Wrapper className="flex-col gap-[20px]">
+					<Wrapper className="justify-center gap-[20px]">
 						<Modal
 							open={openModal}
 							closeModal={() => setOpenModal(false)}
@@ -455,8 +357,7 @@ export const Design = () => {
 								<div style={{ height: '400px' }}>
 									Modal content
 								</div>
-							}
-						>
+							}>
 							<Button
 								type={TYPES.PRIMARY}
 								text="Open Modal"
@@ -466,6 +367,30 @@ export const Design = () => {
 						</Modal>
 					</Wrapper>
 				</Wrapper>
+			</Accordion>
+
+			<hr />
+
+			{/***** ATOM CARD *****/}
+			<Accordion text="Atom Card">
+				<div className="flex gap-[10px] px-8 flex-wrap">
+					<AtomCard
+						preview={test}
+						text="byAtoms"
+						description="A beautiful company with a bright future because Andres is thereA beautiful company with a bright future because Andres is there.A beautiful company with a bright future because Andres is there.A beautiful company with a bright future because Andres is there.A beautiful company with a bright future because Andres is there.A beautiful company with a bright future because Andres is there.">
+						<Button
+							type={TYPES.PRIMARY}
+							text="Button"
+							onClick={() =>
+								console.log('Primary button clicked')
+							}
+						/>
+					</AtomCard>
+					<AtomCard
+						preview={test}
+						text="byAtoms"
+						description="A beautiful company with a bright future because Andres is thereA beautiful company with a bright future because Andres is there.A beautiful company with a bright future because Andres is there.A beautiful company with a bright future because Andres is there.A beautiful company with a bright future because Andres is there.A beautiful company with a bright future because Andres is there."></AtomCard>
+				</div>
 			</Accordion>
 		</Wrapper>
 	);

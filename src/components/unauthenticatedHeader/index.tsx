@@ -1,3 +1,5 @@
+/** @format */
+
 import React from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { Button } from '../shared/button';
@@ -5,20 +7,21 @@ import { Header } from '../shared/header';
 import { TYPES } from '../shared/types';
 import { Wrapper } from '../shared/wrapper';
 import { default as logo } from '../../assets/logoV1.svg';
+import { DISPLAY } from '../shared/wrapper/types';
 
 export const UnauthenticatedHeader = () => {
 	const navigate = useNavigate();
-    return (
+	return (
 		<>
-			<Header height='130px'>
+			<Header className="h-[130px]">
 				<Wrapper>
 					<Link to="/">
-						<Wrapper height="30px">
+						<Wrapper className="h-[30px]">
 							<img src={logo} />
 						</Wrapper>
 					</Link>
 				</Wrapper>
-				<Wrapper display="flex" justifyContent="end">
+				<Wrapper className="justify-end">
 					<Button
 						onClick={() => navigate('/login')}
 						width="150px"
@@ -29,9 +32,11 @@ export const UnauthenticatedHeader = () => {
 					/>
 				</Wrapper>
 			</Header>
-			<Wrapper padding='40px' display='grid' placeItems='center'>
-            	<Outlet />
+			<Wrapper
+				display={DISPLAY.GRID}
+				className="place-items-center p-[40px]">
+				<Outlet />
 			</Wrapper>
 		</>
-    )
-}
+	);
+};
