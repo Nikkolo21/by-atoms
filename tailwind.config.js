@@ -42,6 +42,7 @@ module.exports = {
 				error: '#F05454',
 				white: '#ffffff',
 				grey: '#a4adb5',
+				greyText: 'rgb(56,55,55)',
 				opacityGrey: 'rgba(10, 10, 10, 0.1)',
 				greyTransparent: 'rgba(0,0,0,0.4)',
 				lightGrey: 'rgba(10, 10, 10, 0.06)',

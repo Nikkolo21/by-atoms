@@ -46,4 +46,5 @@ export interface InputProps {
 	src?: string;
 	name?: string;
 	noBorder?: boolean;
+	className?: string;
 }

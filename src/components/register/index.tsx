@@ -46,13 +46,12 @@ export const Register = () => {
 								display={DISPLAY.GRID}
 								className="place-items-center h-[80px]">
 								<Input
+									className='w-[80%] h-[70%]'
 									onChange={handleChange}
 									onBlur={handleBlur}
 									value={values.email}
 									name="email"
 									type="email"
-									width="80%"
-									height="70%"
 									placeholder="Email"
 								/>
 							</Wrapper>
@@ -60,13 +59,12 @@ export const Register = () => {
 								display={DISPLAY.GRID}
 								className="place-items-center h-[80px]">
 								<Input
+									className='w-[80%] h-[70%]'
 									onChange={handleChange}
 									onBlur={handleBlur}
 									value={values.password}
 									name="password"
 									type="password"
-									width="80%"
-									height="70%"
 									placeholder="Password"
 								/>
 							</Wrapper>
@@ -89,8 +87,7 @@ export const Register = () => {
 									buttonType="submit"
 									type={TYPES.PRIMARY}
 									text="Register"
-									width="30%"
-									height="50px"
+									className='text-sm w-[30%] h-[50px]'
 									letterSpacing="2px"
 									onClick={() => console.log('register')}
 								/>

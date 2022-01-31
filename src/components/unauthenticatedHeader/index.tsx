@@ -6,8 +6,8 @@ import { Button } from '../shared/button';
 import { Header } from '../shared/header';
 import { TYPES } from '../shared/types';
 import { Wrapper } from '../shared/wrapper';
-import { default as logo } from '../../assets/logoV1.svg';
 import { DISPLAY } from '../shared/wrapper/types';
+import { default as logo } from '../../assets/logoV1.svg';
 
 export const UnauthenticatedHeader = () => {
 	const navigate = useNavigate();
@@ -24,9 +24,7 @@ export const UnauthenticatedHeader = () => {
 				<Wrapper className="justify-end">
 					<Button
 						onClick={() => navigate('/login')}
-						width="150px"
-						letterSpacing="1px"
-						fontSize="sm"
+						className='text-sm w-[150px]'
 						type={TYPES.PRIMARY}
 						text="Login"
 					/>

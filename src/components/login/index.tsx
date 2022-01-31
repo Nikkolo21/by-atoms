@@ -9,8 +9,8 @@ import { TYPES } from '../shared/types';
 import { Wrapper } from '../shared/wrapper';
 import { Link } from '../shared/link';
 import { Text } from '../shared/text';
-import { default as isotipo } from '../../assets/isotipoV1.svg';
 import { DISPLAY } from '../shared/wrapper/types';
+import { default as isotipo } from '../../assets/isotipoV1.svg';
 
 export const Login = () => {
 	const navigate = useNavigate();
@@ -54,13 +54,12 @@ export const Login = () => {
 								display={DISPLAY.GRID}
 								className="h-[80px] place-items-center">
 								<Input
+									className='w-[80%] h-[70%]'
 									onChange={handleChange}
 									onBlur={handleBlur}
 									value={values.email}
 									name="email"
 									type="email"
-									width="80%"
-									height="70%"
 									placeholder="Email"
 								/>
 							</Wrapper>
@@ -68,13 +67,12 @@ export const Login = () => {
 								display={DISPLAY.GRID}
 								className="h-[80px] place-items-center">
 								<Input
+									className='w-[80%] h-[70%]'
 									onChange={handleChange}
 									onBlur={handleBlur}
 									value={values.password}
 									name="password"
 									type="password"
-									width="80%"
-									height="70%"
 									placeholder="Password"
 								/>
 							</Wrapper>
@@ -85,8 +83,7 @@ export const Login = () => {
 									buttonType="submit"
 									type={TYPES.PRIMARY}
 									text="Login"
-									width="30%"
-									height="50px"
+									className='text-sm w-[30%] h-[50px]'
 									letterSpacing="2px"
 								/>
 							</Wrapper>

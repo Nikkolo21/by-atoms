@@ -1,7 +1,6 @@
 /** @format */
 
 import React from 'react';
-import { SIZES, Sizes } from '../types';
 import { TextProps } from './types';
 
 export const Text: React.FC<TextProps> = ({

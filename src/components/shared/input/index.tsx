@@ -11,9 +11,7 @@ export const Input: React.FC<InputProps> = ({
 	disabled,
 	onChange,
 	onBlur,
-	width,
 	name,
-	height,
 	padding,
 	fontSize = SIZES.SM,
 	type,
@@ -24,6 +22,7 @@ export const Input: React.FC<InputProps> = ({
 	accept,
 	src,
 	noBorder,
+	className,
 }) => {
 	const setInputSize = (size: Sizes, fontSize: Sizes) => {
 		switch (size) {
@@ -52,8 +51,9 @@ export const Input: React.FC<InputProps> = ({
 				'active:border-primary',
 				'focus-visible:border-primary',
 				setInputSize(size, fontSize),
+				className,
 			].join(' ')}
-			style={{ width, padding, height }}
+			style={{ padding }}
 			id={id}
 			placeholder={placeholder}
 			onChange={onChange}

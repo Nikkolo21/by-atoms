@@ -1,7 +1,6 @@
 /** @format */
 
 import React from 'react';
-import { Text } from '../text';
 import { Sizes, SIZES, Types, TYPES } from '../types';
 import { ButtonProps } from './types';
 
@@ -13,9 +12,6 @@ export const Button: React.FC<ButtonProps> = ({
 	buttonType,
 	type = TYPES.PRIMARY,
 	backgroundColor,
-	width,
-	height,
-	letterSpacing,
 	fontSize = SIZES.SM,
 	icon,
 	onClick,
@@ -69,13 +65,11 @@ export const Button: React.FC<ButtonProps> = ({
 				...setButtonSize(size, fontSize),
 				className,
 			].join(' ')}
-			style={{ backgroundColor, width, height }}
+			style={{ backgroundColor }}
 			onClick={disabled ? () => {} : onClick}
 			type={buttonType}>
 			{icon}
-			<Text fontSize={fontSize} letterSpacing={letterSpacing}>
-				{text}
-			</Text>
+			{text}
 		</button>
 	);
 };

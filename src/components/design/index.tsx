@@ -186,8 +186,7 @@ export const Design = () => {
 								type="button"
 								id="button"
 								value="Click me!"
-								width="min-content"
-								height="min-content"
+								className='w-min h-min'
 								onChange={() =>
 									console.log('Input button clicked')
 								}
@@ -200,11 +199,10 @@ export const Design = () => {
 						<Wrapper className="flex-col justify-center w-min gap-[5px]">
 							<label htmlFor="color">Color</label>
 							<Input
+								className='w-[60px] h-[30px]'
 								type="color"
 								id="color"
 								value="#f6b73c"
-								width="60px"
-								height="30px"
 								padding="6px"
 							/>
 						</Wrapper>
@@ -361,7 +359,7 @@ export const Design = () => {
 							<Button
 								type={TYPES.PRIMARY}
 								text="Open Modal"
-								width="25%"
+								className='w-[25%]'
 								onClick={() => setOpenModal(true)}
 							/>
 						</Modal>

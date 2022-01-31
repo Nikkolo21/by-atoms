@@ -32,8 +32,7 @@ export const Projects = () => {
 		<>
 			<Wrapper className="flex-1 justify-end max-w-[1280px]">
 				<Button
-					className="w-[160px]"
-					fontSize="sm"
+					className="w-[160px] text-sm"
 					size="sm"
 					letterSpacing="1px"
 					text="Create project"
@@ -43,10 +42,8 @@ export const Projects = () => {
 				<Wrapper className="flex-col flex-1 mt-[20px] p-[40px] max-h-[70vh] bg-[rgba(10,10,10,0.03)] rounded-[10px]">
 					Menu
 				</Wrapper>
-				<Wrapper className="flex-col flex-3 mt-[20px] mb-[20px]">
-					{projects.map((project) => (
-						<ProjectCard project={project} />
-					))}
+				<Wrapper className="flex-col flex-3 mt-[20px] ml-[20px] mb-[20px]">
+					{projects.map(project => <ProjectCard key={project.id} project={project} />)}
 				</Wrapper>
 			</Wrapper>
 		</>

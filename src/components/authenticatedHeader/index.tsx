@@ -40,8 +40,8 @@ export const AuthenticatedHeader = () => {
 					display={DISPLAY.GRID}
 					className="place-items-center flex-2">
 					<Input
+						className='w-[100%]'
 						fontSize="normal"
-						width="100%"
 						placeholder="Search project"
 					/>
 				</Wrapper>
