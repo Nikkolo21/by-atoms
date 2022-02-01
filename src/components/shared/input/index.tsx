@@ -65,7 +65,7 @@ export const Input: React.FC<InputProps> = ({
 			accept={accept}
 			src={src}
 			disabled={disabled}
-			value={value}
+			defaultValue={value}
 			name={name}
 		/>
 	);
