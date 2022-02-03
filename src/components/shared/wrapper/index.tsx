@@ -5,8 +5,9 @@ import { WrapperProps, DISPLAY } from './types';
 
 export const Wrapper: React.FC<WrapperProps> = ({
 	className,
+	title,
 	children,
 	display = DISPLAY.FLEX,
 }) => {
-	return <div className={`${display} w-full ${className}`}>{children}</div>;
+	return <div title={title} className={`${display} w-full ${className}`}>{children}</div>;
 };
