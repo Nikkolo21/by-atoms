@@ -10,5 +10,6 @@ export enum DISPLAY {
 
 export interface WrapperProps {
 	display?: Display;
+	title?: string;
 	className?: string;
 }
