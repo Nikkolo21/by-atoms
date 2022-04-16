@@ -13,11 +13,10 @@ export const Modal: React.FC<ModalProps> = ({
 	return (
 		<>
 			<div
-				className="fixed z-50 left-0 top-0 w-full h-full overflow-auto bg-greyTransparent"
-				hidden={!open}
+				className={`${open ? 'grid' : 'hidden'} place-items-center fixed z-50 left-0 top-0 w-full h-full overflow-auto bg-greyTransparent`}
 			>
 				<div
-					style={{ margin: '15% auto', border: '1px solid #888' }}
+					style={{ border: '1px solid #888' }}
 					className="rounded-md relative bg-white w-9/12 p-6"
 				>
 					<div className="absolute right-6">

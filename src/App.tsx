@@ -12,6 +12,7 @@ import { AuthenticatedHeader } from './components/authenticatedHeader';
 import { UnauthenticatedHeader } from './components/unauthenticatedHeader';
 import { Profile } from './components/profile';
 import { Project } from './components/project';
+import { Atom } from './components/atom';
 import { Dashboard } from './components/dashboard';
 import { Configuration } from './components/configuration';
 import './index.css';
@@ -31,6 +32,7 @@ function App() {
 						<Route path="/design" element={<Design />} />
 						<Route path="/dashboard" element={<Dashboard />} />
 						<Route path="/project/:id" element={<Project />} />
+						<Route path="/atom/:id" element={<Atom />} />
 						<Route path="/profile" element={<Profile />} />
 						<Route path="/config" element={<Configuration />} />
 					</Route>

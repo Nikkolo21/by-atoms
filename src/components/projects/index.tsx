@@ -1,7 +1,8 @@
 /** @format */
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '../shared/button';
+import { Modal } from '../shared/modal';
 import { Wrapper } from '../shared/wrapper';
 import { ProjectCard } from './projectCard';
 import { Project } from './types';
@@ -28,6 +29,10 @@ const mockProjects: Project[] = [
 ];
 
 export const Projects = () => {
+	const [openModal, setOpenModal] = useState(false);
+
+	const openOrCloseModal = () => setOpenModal(!openModal);
+
 	return (
 		<Wrapper className="flex-col">
 			<Wrapper className="flex-1 justify-end mb-[20px] max-w-[1280px]">
@@ -36,8 +41,21 @@ export const Projects = () => {
 					size="sm"
 					letterSpacing="1px"
 					text="Create project"
+					onClick={openOrCloseModal}
 				/>
 			</Wrapper>
+
+			<Modal
+				open={openModal}
+				closeModal={openOrCloseModal}
+				content={
+					<div>
+						<p>Modal content</p>
+						<p>Modal content</p>
+						<p>Modal content</p>
+					</div>
+				}>
+			</Modal>
 			{mockProjects.map(project => <ProjectCard key={project.id} project={project} />)}
 		</Wrapper>
 	);
